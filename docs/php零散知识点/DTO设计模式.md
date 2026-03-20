@@ -24,7 +24,7 @@
 
 假设你有一个名为 "User" 的模型，并且你想在控制器和服务层之间传递用户数据。
 
-```php+HTML
+```php
 /app
     /Http
         /Controllers
@@ -39,7 +39,7 @@
 
 在 `app/DTO` 目录下创建一个名为 `UserDTO.php` 的文件：
 
-```php+HTML
+```php
 <?php
 
 namespace App\DTO;
@@ -61,7 +61,7 @@ class UserDTO
 
 在你的控制器中，你可以创建一个 UserDTO 对象并将其传递给服务层：
 
-```php+HTML
+```php
 <?php
 
 namespace App\Http\Controllers;
@@ -96,7 +96,7 @@ class UserController extends Controller
 
 在你的服务层中，接受 DTO 对象并处理它：
 
-```php+HTML
+```php
 <?php
 
 namespace App\Services;

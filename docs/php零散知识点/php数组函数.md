@@ -90,7 +90,7 @@ array:2 [
 
 ## [删除数组中最后面几位](https://blog.csdn.net/weixin_42525582/article/details/115205188)
 
-```php+HTML
+```php
 <?php
 
 $arr = [1 => '保洁服务', 2 => '保姆服务', 3 => '工程师服务'];

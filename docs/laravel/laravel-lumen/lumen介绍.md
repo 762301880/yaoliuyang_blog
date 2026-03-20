@@ -50,7 +50,7 @@ $router->get('hello_world', function () {
 
 * 例如http://www.lumen.com/hello_world  出现以下结果则成功
 
-```php+HTML
+```php
 Hello World
 ```
 
