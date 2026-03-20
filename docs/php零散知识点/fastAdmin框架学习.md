@@ -252,7 +252,7 @@ server {
 
 > 下载插件后  添加class   class="form-control editor Summernote"
 
-```php
+```php+HTML
  <div class="col-xs-12 col-sm-8">
             <textarea id="c-content" class="form-control editor Summernote" rows="5" name="row[content]"
                       cols="50"></textarea>

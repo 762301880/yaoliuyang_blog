@@ -19,7 +19,7 @@
 
 如果你用 PHP 8.1 及以上，推荐用 **枚举 Enum**：
 
-```php
+```php+HTML
 <?php
 
 enum ResponseCode: int
