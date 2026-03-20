@@ -1,12 +1,12 @@
 import { defineConfig } from 'vitepress'
 import { generateSidebar } from 'vitepress-sidebar'
 
-// ✅ 自动分组 + 折叠（不需要 index.md）
+// ✅ 自动分组 + 折叠
 function groupSidebar(sidebar: any[]) {
     const result: any[] = []
 
     sidebar.forEach(item => {
-        // 1️⃣ 已经是分组（有 items）
+        // 已经是分组
         if (item.items && item.items.length) {
             result.push({
                 ...item,
@@ -15,7 +15,7 @@ function groupSidebar(sidebar: any[]) {
             return
         }
 
-        // 2️⃣ 普通页面（有 link）
+        // 普通页面
         if (item.link) {
             const parts = item.link.split('/')
             const folder = parts[1] || 'root'
@@ -38,7 +38,7 @@ function groupSidebar(sidebar: any[]) {
     return result
 }
 
-// 原始 sidebar
+// ✅ 原始 sidebar
 const rawSidebar = generateSidebar({
     documentRootPath: 'docs'
 })
@@ -50,38 +50,54 @@ export default defineConfig({
         lineNumbers: true,
 
         config(md) {
-            const defaultFence = md.renderer.rules.fence
+            const fence = md.renderer.rules.fence!
 
             md.renderer.rules.fence = (tokens, idx, options, env, self) => {
                 const token = tokens[idx]
+
                 let lang = (token.info || '').trim().toLowerCase()
 
-                // ✅ 语言映射（关键）
                 const langMap: Record<string, string> = {
-                    'mysql': 'sql',
-                    'postgres': 'sql',
-                    'shell': 'bash',
-                    'sh': 'bash',
-                    'zsh': 'bash',
-                    'env': 'bash',
-                    'ini': 'bash',
-                    'conf': 'bash',
-                    'nginx': 'bash',
-                    'docker': 'dockerfile',
-                    'yml': 'yaml',
+                    mysql: 'sql',
+                    postgres: 'sql',
+                    shell: 'bash',
+                    sh: 'bash',
+                    zsh: 'bash',
+                    env: 'bash',
+                    ini: 'bash',
+                    conf: 'bash',
+                    nginx: 'bash',
+                    docker: 'dockerfile',
+                    yml: 'yaml',
                     'php+html': 'php'
                 }
 
+                // ✅ 映射
                 if (langMap[lang]) {
                     token.info = langMap[lang]
                 }
+                // ✅ 处理 php+html / vue+ts
+                else if (lang.includes('+')) {
+                    token.info = lang.split('+')[0]
+                }
+
+                // ✅ 安全语言白名单（防止 shiki 报错）
+                const safeLangs = [
+                    'js','ts','html','css','json',
+                    'bash','sql','php','vue',
+                    'yaml','markdown','text','txt'
+                ]
+
+                if (!safeLangs.includes(token.info)) {
+                    token.info = 'text'
+                }
 
                 try {
-                    return defaultFence(tokens, idx, options, env, self)
+                    return fence(tokens, idx, options, env, self)
                 } catch (e) {
-                    // ✅ 兜底防炸
+                    // 💥 最后一层保险
                     token.info = 'text'
-                    return defaultFence(tokens, idx, options, env, self)
+                    return fence(tokens, idx, options, env, self)
                 }
             }
         }
