@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  vitepress:
+    image: node:20-alpine
+    container_name: vitepress-blog
+    working_dir: /app
+    volumes:
+      - ./:/app
+    ports:
+      - "5173:5173"
+    command: sh -c "rm -rf node_modules package-lock.json && npm install && npm run dev -- --host 0.0.0.0"
