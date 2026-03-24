@@ -93,7 +93,7 @@ Windows IP 配置
 
 **mysql -h 主机名 (ip) -u 用户名 -P 端口号 -p**
 
-```mysql
+```sql
 # 登录mysql
 D:\>mysql -h localhost -u root -p
 Enter password: ******

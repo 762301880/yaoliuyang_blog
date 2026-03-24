@@ -33,7 +33,7 @@
 
 #### 用户表
 
-```mysql
+```sql
 CREATE TABLE `user` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(20) CHARACTER SET utf8 NOT NULL COMMENT '姓名',
@@ -49,7 +49,7 @@ CREATE TABLE `user` (
 
 ####  **角色表**
 
-```mysql
+```sql
 CREATE TABLE `role` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL COMMENT '角色名称',
@@ -63,7 +63,7 @@ CREATE TABLE `role` (
 
 #### **用户角色关联表**
 
-```mysql
+```sql
 CREATE TABLE `user_role` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) DEFAULT NULL COMMENT '用户id',
@@ -76,7 +76,7 @@ CREATE TABLE `user_role` (
 
 #### **权限表**
 
-```mysql
+```sql
 CREATE TABLE `permission` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL COMMENT '权限标题',
@@ -94,7 +94,7 @@ CREATE TABLE `permission` (
 
 #### **角色权限关系表**
 
-```mysql
+```sql
 CREATE TABLE `role_permission` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `role_id` int(11) DEFAULT NULL COMMENT '角色id',

@@ -99,13 +99,13 @@ skip-grant-tables
 
 8、进入界面后更改root密码
 
-```mysql
+```sql
 update mysql.user set authentication_string=password('123456') where user='root' and Host = 'localhost';
 ```
 
 9、刷新权限
 
-```mysql
+```sql
 flush privileges;
 ```
 
@@ -113,7 +113,7 @@ flush privileges;
 
 11、重启mysql即可正常使用
 
-```mysql
+```sql
 net stop mysql
 net start mysql
 ```
@@ -2840,7 +2840,7 @@ public class TestC3P0 {
 
 **查询是否开启了慢sql**
 
-```mysql
+```sql
 mysql> show variables like'%query_log%';
 --------------
 show variables like'%query_log%'
@@ -2994,7 +2994,7 @@ SELECT * FROM pxs_log_action where request_body like CONCAT('%',@mobile,'%');
 
 ### **1. 查看当前最大连接数配置**
 
-```mysql
+```sql
 SHOW VARIABLES LIKE 'max_connections';
 ```
 
@@ -3014,7 +3014,7 @@ SHOW VARIABLES LIKE 'max_connections';
 
 如果需要测试更高的连接数，可临时调整：
 
-```mysql
+```sql
 SET GLOBAL max_connections = 1000;  -- 临时修改（重启后失效）
 ```
 

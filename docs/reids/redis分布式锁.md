@@ -27,7 +27,7 @@
 
 **创建数据库**
 
-```mysql
+```sql
 # 数据库count 其中count 字段设置100 用于模拟,商品剩余数量
 CREATE TABLE `count` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -76,7 +76,7 @@ CREATE TABLE `decrement_count` (
 
 **查询是否有重复的列**
 
-```mysql
+```sql
 SELECT COALESCE
 	( count_decrement_id, '总数' ) count_decrement_id,
 	COUNT( count_decrement_id ) AS id 

@@ -24,7 +24,7 @@
 
 假设有一张订单表 `orders`：
 
-```mysql
+```sql
 CREATE TABLE orders (
     id BIGINT PRIMARY KEY AUTO_INCREMENT,
     user_id BIGINT NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE orders (
 
 这里我们创建了一个**联合索引**：
 
-```mysql
+```sql
 (user_id, order_date, status)
 ```
 
@@ -45,7 +45,7 @@ CREATE TABLE orders (
 
 #### 案例 1：完全匹配
 
-```mysql
+```sql
 SELECT * 
 FROM orders 
 WHERE user_id = 1001 AND order_date = '2025-09-15' AND status = 1;
@@ -55,7 +55,7 @@ WHERE user_id = 1001 AND order_date = '2025-09-15' AND status = 1;
 
 #### 案例 2：部分匹配（前缀原则）
 
-```mysql
+```sql
 SELECT * 
 FROM orders 
 WHERE user_id = 1001 AND order_date = '2025-09-15';
@@ -65,7 +65,7 @@ WHERE user_id = 1001 AND order_date = '2025-09-15';
 
 #### 案例 3：跳过中间列(不会走联合索引)
 
-```mysql
+```sql
 SELECT * 
 FROM orders 
 WHERE user_id = 1001 AND status = 1;
@@ -76,7 +76,7 @@ WHERE user_id = 1001 AND status = 1;
 
 #### 案例 4：范围查询阻断
 
-```mysql
+```sql
 SELECT * 
 FROM orders 
 WHERE user_id = 1001 AND order_date >= '2025-09-01' AND status = 1;
@@ -112,7 +112,7 @@ WHERE user_id = 1001 AND order_date >= '2025-09-01' AND status = 1;
 
 语法示例：
 
-```mysql
+```sql
 SELECT *
 FROM table1 t1
 WHERE NOT EXISTS (
@@ -153,7 +153,7 @@ WHERE NOT EXISTS (
 
 如果想找出 **没有下过订单的用户**，可以用：
 
-```mysql
+```sql
 SELECT *
 FROM users u
 WHERE NOT EXISTS (
@@ -189,7 +189,7 @@ WHERE NOT EXISTS (
 
 找出 **2025-09 月未完成订单的用户**：
 
-```mysql
+```sql
 SELECT *
 FROM users u
 WHERE NOT EXISTS (
@@ -220,7 +220,7 @@ WHERE NOT EXISTS (
 
 #### 数据表
 
-```mysql
+```sql
 -- 原sql查询0.7秒
 ( SELECT
 	`my`.`head`,

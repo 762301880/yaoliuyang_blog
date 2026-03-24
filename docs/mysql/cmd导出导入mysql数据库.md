@@ -67,7 +67,7 @@ Enter password: ******
 
 ## 导出数据表
 
-```mysql
+```sql
 # -p 数据库 数据库下的数据表
 C:\Program Files\MySQL\MySQL Server 5.7\bin>mysqldump -u root -p laravel_study class_s> d:/class_s.sql
 Enter password: ******

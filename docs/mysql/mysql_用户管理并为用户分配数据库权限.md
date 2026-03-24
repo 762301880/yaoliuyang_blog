@@ -42,7 +42,7 @@ MySQL是一种流行的关系型数据库管理系统，可以使用以下命令
 
 1. 创建用户：
 
-   ```mysql
+   ```sql
    CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
    ```
 
@@ -50,7 +50,7 @@ MySQL是一种流行的关系型数据库管理系统，可以使用以下命令
 
 2. 授予全局权限：
 
-   ```mysql
+   ```sql
    GRANT ALL PRIVILEGES ON *.* TO 'username'@'localhost';
    ```
 
@@ -58,7 +58,7 @@ MySQL是一种流行的关系型数据库管理系统，可以使用以下命令
 
 3. 授予特定数据库权限：
 
-   ```mysql
+   ```sql
    GRANT ALL PRIVILEGES ON dbname.* TO 'username'@'localhost';
    ```
 
@@ -66,7 +66,7 @@ MySQL是一种流行的关系型数据库管理系统，可以使用以下命令
 
 4. 授予特定表权限：
 
-   ```mysql
+   ```sql
    GRANT SELECT, INSERT, DELETE ON dbname.tablename TO 'username'@'localhost';
    ```
 
@@ -74,7 +74,7 @@ MySQL是一种流行的关系型数据库管理系统，可以使用以下命令
 
 5. 刷新权限：
 
-   ```mysql
+   ```sql
    FLUSH PRIVILEGES;
    ```
 

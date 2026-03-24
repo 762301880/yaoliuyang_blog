@@ -122,7 +122,7 @@ array:10 [▼
 
 [![xVh86s.png](https://s1.ax1x.com/2022/09/26/xVh86s.png)](https://imgse.com/i/xVh86s)
 
-```mysql
+```sql
 CREATE TABLE `stu` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `sname` char(10) DEFAULT NULL,

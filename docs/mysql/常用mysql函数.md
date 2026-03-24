@@ -85,7 +85,7 @@ WHERE TABLE_SCHEMA = '数据库名' AND TABLE_NAME = '表名';
 >
 > 利用mysql的**REPLACE**函数做替换字符
 >
-> ```mysql
+> ```sql
 > REPLACE(s,s1,s2)	将字符串 s2 替代字符串 s 中的字符串 s1	
 > 将字符串 abc 中的字符 a 替换为字符 x：    SELECT REPLACE('abc','a','x') --xbc
 > ```
@@ -196,7 +196,7 @@ call addMyData();
 
 **示例补充- 自动递增日期**
 
-```mysql
+```sql
 # 添加数据库
 CREATE TABLE `test` (
   `id` int NOT NULL AUTO_INCREMENT COMMENT ' ',
@@ -234,7 +234,7 @@ DROP PROCEDURE if exists addMyData -- 先删除再创建
 
 ## 删除三个月前的数据
 
-```mysql
+```sql
 # FROM_UNIXTIME(create_time,'%Y-%m-%d')
 DELETE FROM `test` where  DATE_FORMAT(create_time,'%Y-%m-%d') <  DATE_FORMAT( DATE_SUB( CURDATE(), INTERVAL 3 MONTH ), '%Y-%m-%d' )
 
@@ -309,14 +309,14 @@ ref
 示例解释
 假设有一个查询如下：
 
-```mysql
+```sql
 SELECT * FROM orders WHERE customer_id = 123;
 ```
 
 在这个查询中，如果 customer_id 上有索引，并且 EXPLAIN 的输出显示 type 为 ref，那么 ref 列可能会显示 const，表示使用的是一个常量值（即 123）来进行索引查找。
 再比如：
 
-```mysql
+```sql
 SELECT * FROM orders o JOIN customers c ON o.customer_id = c.id;
 ```
 

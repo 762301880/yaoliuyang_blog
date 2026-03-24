@@ -191,7 +191,7 @@ Query OK, 0 rows affected (0.03 sec)
 >
 > 找到容器内部`/etc/mysql/conf.d`下的**mysql.cnf**配置使用`vim`打开
 
-```mysql
+```sql
 mysql> use mysql;  # 选择mysql数据库
 Reading table information for completion of table and column names
 You can turn off this feature to get a quicker startup with -A
@@ -381,7 +381,7 @@ dcoker rm chat2db
 
 
 
-```mysql
+```sql
 ## ---BEGIN---
 ## 查询学生小明的各科目成绩
 
@@ -396,7 +396,7 @@ WHERE student.name = '小明'
 
 sql优化
 
-```mysql
+```sql
 ## ---BEGIN---
 ## SELECT score.score 
 FROM score 
