@@ -274,7 +274,7 @@ docker-compose exec workspace bash
 
 打开 Laravel 的 `.env` 文件 然后 配置 你的 `mysql` 的 `DB_HOST`:
 
-```env
+```text
 DB_HOST=mysql
 ```
 
@@ -521,7 +521,7 @@ docker-compose up -d redis
 
 2 - 打开你的Laravel的 `.env` 文件 然后 配置 `redis` 的 `REDIS_HOST`
 
-```env
+```text
 REDIS_HOST=redis
 ```
 
@@ -541,7 +541,7 @@ REDIS_HOST=redis
 
 3 - 启用 Redis 缓存或者开启 Session 管理也在 `.env` 文件中用 `redis` 替换默认 `file` 设置 `CACHE_DRIVER` 和 `SESSION_DRIVER`
 
-```env
+```text
 CACHE_DRIVER=redis
 SESSION_DRIVER=redis
 ```
