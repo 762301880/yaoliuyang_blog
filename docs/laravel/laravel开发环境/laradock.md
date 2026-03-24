@@ -360,14 +360,14 @@ docker-compose exec mysql bash
 
 修改 MySQL 数据库名称:
 
-```yml
+```text
   environment:
     MYSQL_DATABASE: laradock
 ```
 
 修改 Redis 默认端口为 1111:
 
-```yml
+```text
   ports:
     - "1111:6379"
 ```
@@ -572,7 +572,7 @@ composer require predis/predis:^1.0
 
 相关配置项如下:
 
-```yml
+```text
     workspace:
         build:
             context: ./workspace
@@ -730,7 +730,7 @@ docker-compose build php
 
 例如:
 
-```yml
+```text
     workspace:
         build:
             context: ./workspace
@@ -783,7 +783,7 @@ server_name laravel.test;
 
 例如:
 
-```yml
+```text
     workspace:
         build:
             context: ./workspace
@@ -827,7 +827,7 @@ c - 重建 Workspace 容器 `docker-compose build workspace`
 
 例如:
 
-```yml
+```text
     workspace:
         build:
             context: ./workspace
