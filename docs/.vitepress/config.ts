@@ -8,7 +8,6 @@ function groupSidebar(sidebar: any[]) {
     const result: any[] = []
 
     sidebar.forEach(item => {
-        // 已经是分组
         if (item.items && item.items.length) {
             result.push({
                 ...item,
@@ -17,7 +16,6 @@ function groupSidebar(sidebar: any[]) {
             return
         }
 
-        // 普通页面
         if (item.link) {
             const parts = item.link.split('/')
             const folder = parts[1] || 'root'
@@ -41,7 +39,7 @@ function groupSidebar(sidebar: any[]) {
 }
 
 // ========================
-// ✅ 原始 sidebar
+// ✅ sidebar
 // ========================
 const rawSidebar = generateSidebar({
     documentRootPath: 'docs'
@@ -81,27 +79,51 @@ export default defineConfig({
 
     title: "姚留洋的技术博客",
 
-    // 忽略死链
     ignoreDeadLinks: true,
 
     markdown: {
         lineNumbers: true,
 
         // ========================
-        // 🚀 终极兜底（关键）
+        // 🚀 核心：解析阶段拦截（不会再炸）
+        // ========================
+        config(md) {
+
+            md.core.ruler.before('normalize', 'fix-code-lang', (state) => {
+                state.tokens.forEach(token => {
+                    if (token.type === 'fence') {
+
+                        let lang = (token.info || '').trim().toLowerCase()
+
+                        // 👉 映射
+                        if (langMap[lang]) {
+                            token.info = langMap[lang]
+                        } else if (lang.includes('+')) {
+                            token.info = lang.split('+')[0]
+                        }
+
+                        // 👉 白名单过滤
+                        if (!safeLangs.includes(token.info)) {
+                            token.info = 'text'
+                        }
+                    }
+                })
+            })
+        },
+
+        // ========================
+        // 🚀 兜底（防极端情况）
         // ========================
         async highlight(code, lang) {
 
             lang = (lang || '').toLowerCase()
 
-            // 👉 映射
             if (langMap[lang]) {
                 lang = langMap[lang]
             } else if (lang.includes('+')) {
                 lang = lang.split('+')[0]
             }
 
-            // 👉 白名单过滤
             if (!safeLangs.includes(lang)) {
                 lang = 'text'
             }
@@ -116,40 +138,7 @@ export default defineConfig({
 
                 return highlighter.codeToHtml(code, { lang })
             } catch (e) {
-                // 💥 最后一层保险（永不失败）
                 return `<pre><code>${code}</code></pre>`
-            }
-        },
-
-        // ========================
-        // ✅ fence 预处理（可选增强）
-        // ========================
-        config(md) {
-            const fence = md.renderer.rules.fence!
-
-            md.renderer.rules.fence = (tokens, idx, options, env, self) => {
-                const token = tokens[idx]
-
-                let lang = (token.info || '').trim().toLowerCase()
-
-                // 👉 映射
-                if (langMap[lang]) {
-                    token.info = langMap[lang]
-                } else if (lang.includes('+')) {
-                    token.info = lang.split('+')[0]
-                }
-
-                // 👉 白名单
-                if (!safeLangs.includes(token.info)) {
-                    token.info = 'text'
-                }
-
-                try {
-                    return fence(tokens, idx, options, env, self)
-                } catch (e) {
-                    token.info = 'text'
-                    return fence(tokens, idx, options, env, self)
-                }
             }
         }
     },
