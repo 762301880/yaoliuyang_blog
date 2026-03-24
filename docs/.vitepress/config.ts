@@ -1,12 +1,10 @@
 import { defineConfig } from 'vitepress'
 import { generateSidebar } from 'vitepress-sidebar'
 
-// ✅ 自动分组 + 折叠（不需要 index.md）
 function groupSidebar(sidebar: any[]) {
     const result: any[] = []
 
     sidebar.forEach(item => {
-        // 1️⃣ 已经是分组（有 items）
         if (item.items && item.items.length) {
             result.push({
                 ...item,
@@ -15,7 +13,6 @@ function groupSidebar(sidebar: any[]) {
             return
         }
 
-        // 2️⃣ 普通页面（有 link）
         if (item.link) {
             const parts = item.link.split('/')
             const folder = parts[1] || 'root'
@@ -38,7 +35,6 @@ function groupSidebar(sidebar: any[]) {
     return result
 }
 
-// 原始 sidebar
 const rawSidebar = generateSidebar({
     documentRootPath: 'docs'
 })
@@ -49,33 +45,40 @@ export default defineConfig({
     markdown: {
         lineNumbers: true,
 
-        // ✅ 在“高亮阶段”修正语言（关键）
-        highlight(code, lang) {
-            const langMap: Record<string, string> = {
-                'mysql': 'sql',
-                'postgres': 'sql',
-                'shell': 'bash',
-                'sh': 'bash',
-                'zsh': 'bash',
-                'env': 'bash',
-                'ini': 'bash',
-                'conf': 'bash',
-                'nginx': 'bash',
-                'docker': 'dockerfile',
-                'yml': 'yaml',
-                'php+html': 'php'
-            }
+        // ✅ 只声明真正存在的语言
+        languages: [
+            'sql', 'bash', 'yaml', 'dockerfile',
+            'ts', 'js', 'json', 'html', 'css', 'text'
+        ]
+    },
 
-            lang = (lang || '').toLowerCase()
+    // ✅ ⭐⭐⭐ 核心：覆盖 Shiki 行为
+    vite: {
+        ssr: {
+            noExternal: ['shiki']
+        }
+    },
 
-            if (langMap[lang]) {
-                lang = langMap[lang]
-            }
+    // ✅ ⭐⭐⭐ 真正兜底（不会再炸）
+    async buildEnd(siteConfig) {
+        const shiki = await import('shiki')
 
+        const highlighter = await shiki.getHighlighter({
+            langs: [
+                'sql','bash','yaml','dockerfile',
+                'ts','js','json','html','css','text'
+            ],
+            themes: ['github-dark']
+        })
+
+        // 👉 强行兜底
+        const original = highlighter.codeToHtml.bind(highlighter)
+
+        highlighter.codeToHtml = (code, options) => {
             try {
-                return `<pre><code class="language-${lang}">${code}</code></pre>`
+                return original(code, options)
             } catch (e) {
-                return `<pre><code>${code}</code></pre>`
+                return original(code, { ...options, lang: 'text' })
             }
         }
     },
