@@ -19,7 +19,7 @@
 
 - 前端代码
 
-```php+HTML
+```php
 <!DOCTYPE html>
 <html lang="en">
 <head>

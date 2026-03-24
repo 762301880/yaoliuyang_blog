@@ -60,7 +60,7 @@ const langMap: Record<string, string> = {
     nginx: 'bash',
     docker: 'dockerfile',
     yml: 'yaml',
-    'php+html': 'php'
+    'php': 'php'
 }
 
 // ========================
