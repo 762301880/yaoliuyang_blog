@@ -240,7 +240,7 @@ public static function ipRequestLimit($methodName, $ip, $timeout = 10*60,$limit=
 >
 > 防抖就是将多次高频操作优化为只在最后一次执行（某个函数在某段时间内，无论触发了多少次回调，都只执行最后一次）。通常的使用场景是：用户输入，只需在输入完成后做一次输入校验即可。
 
-```shell
+```bash
         $user_token = $request->header('xcx-token');//token
         $method = $request->getMethod();//请求方法
         $path = $request->path();//路径

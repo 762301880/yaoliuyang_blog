@@ -6,7 +6,7 @@
 
 #  流程
 
-```shell
+```bash
 # 启动并下载镜像 这里解释一下为什么设置了两个端口  第一个端口用于使用swoole  第二个端口用于访问项目
 
 docker run -v /data/work/项目名称:/data/work/项目名称 -p 9501:9501 -p 1997:80 --restart=always --name "laravel_study" -itd --entrypoint /bin/sh hyperf/hyperf:7.4-alpine-v3.11-swoole
@@ -60,7 +60,7 @@ tcp        0      0 127.0.0.1:9000          0.0.0.0:*               LISTEN      
 
 # [对应nginx 配置](https://learnku.com/docs/laravel/8.x/deployment/9359#nginx)
 
-```shell
+```bash
 server {
     listen 80;
     server_name 81.69.231.252;

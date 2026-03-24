@@ -27,7 +27,7 @@
 
 **下载centos镜像**
 
-```shell
+```bash
 # 下载最新的centos镜像
 PS C:\Users\Administrator> docker pull centos:latest         
 # 查看下载的镜像

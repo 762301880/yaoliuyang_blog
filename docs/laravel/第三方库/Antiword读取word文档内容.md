@@ -14,7 +14,7 @@
 
 **设置环境变量**
 
-```shell
+```bash
 鼠标右键-此电脑-属性-高级系统设置-环境变量-系统变量-将下载解压的Antiword目录写在Path里
 ```
 
@@ -22,7 +22,7 @@
 
 [**简单测试**](https://blog.csdn.net/qq_29099209/article/details/79904417)
 
-```shell
+```bash
 antiword -h
 # 测试输出文件内容
 antiword –t 文件名.doc

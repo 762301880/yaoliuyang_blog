@@ -10,7 +10,7 @@
 
 ## 操作步骤
 
-```shell
+```bash
 # 简化步骤
 sudo apt install ntpdate
 sudo ntpdate asia.pool.ntp.org

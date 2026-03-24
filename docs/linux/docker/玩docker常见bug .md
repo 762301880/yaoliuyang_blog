@@ -4,7 +4,7 @@
 
 **报错示例**
 
-```shell
+```bash
 bash-5.0# cd /data/work/
 bash-5.0# ls
 laravel_study
@@ -38,7 +38,7 @@ rm: can't remove 'laravel_study': Resource busy
 
 **修改示例**
 
-```shell
+```bash
 # 查询当前时区
 bash-5.0# date -R
 Mon, 21 Mar 2022 07:44:02 +0000
@@ -60,7 +60,7 @@ Mon, 21 Mar 2022 15:45:04 +0800
 
 **解决方案**
 
-```shell
+```bash
 # 查看进程位置
 bash-5.0# find / -name *cron\*
 /etc/crontabs
@@ -109,7 +109,7 @@ bash-5.0# ps aux|grep cron
 
 **建议写一个测试文件用于监控定时任务**
 
-```shell
+```bash
 # test  每分钟跑一个定时脚本写入时间  每小时10分钟清理只写入一条
 * * * * *   echo  $(date "+%Y-%m-%d %X") >> ~/test_cron.txt 
 10 * * * *  echo  $(date "+%Y-%m-%d %X")  >> ~/test_cron.txt 
@@ -123,7 +123,7 @@ bash-5.0# ps aux|grep cron
 | -------- | ------------------------------------------------------------ |
 | 参考博客 | [link](https://huaweicloud.csdn.net/63311178d3efff3090b51123.html) |
 
-```shell
+```bash
 # 启动docker的时候加上命令   --privileged=True就OK
 ```
 
@@ -145,7 +145,7 @@ bash-5.0# ps aux|grep cron
 >
 > 例如 调用 php artisan 自定义命令写入的日志 
 
-```shell
+```bash
 root@hcss-ecs-739f:/work/php_projects/laravel_study/storage/logs# ls -al
 total 100
 drwxrwxrwx 2 www-data www-data  4096 Aug  8 08:10 .
@@ -159,7 +159,7 @@ drwxrwxrwx 5 root     root      4096 Aug  7 09:53 ..
 
 > 把上面一个文件删了调用接口 会通过 ip+地址 会调用 php-fpm  生成一个  nginx用户生成的日志文件
 
-```shell
+```bash
 root@hcss-ecs-739f:/work/php_projects/laravel_study/storage/logs# ls -al
 total 100
 ...........

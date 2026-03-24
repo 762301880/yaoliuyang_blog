@@ -143,7 +143,7 @@ $this->app->order->queryByOutTradeNumber("商户系统内部的订单号（out_t
 
 ### 根据微信订单号查询
 
-```shell
+```bash
 $app->order->queryByTransactionId("微信订单号（transaction_id）");
 ```
 
@@ -211,7 +211,7 @@ array:10 [
 
 > 测试一下传递的回调参数
 
-```shell
+```bash
    use EasyWeChat\Kernel\Support\XML;
    public function notice(Request $request)
     {

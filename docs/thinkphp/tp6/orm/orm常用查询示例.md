@@ -6,7 +6,7 @@
 
 - tp查询指定两列的值
 
-```shell
+```bash
 Student::field(['order_id','serial_sn'])->select();
 ```
 

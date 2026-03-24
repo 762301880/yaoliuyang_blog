@@ -15,7 +15,7 @@
 >
 > 首先，添加ppa:ondrej/php PPA存储库，它具有最新的PHP构建包。 键入以下命令以添加存储库。 在提示时按Enter键添加存储库。
 
-```shell
+```bash
  sudo apt-get install software-properties-common
  sudo add-apt-repository ppa:ondrej/php # 走到这一步的时候会卡住按enter键继续即可
  sudo apt-get update 
@@ -23,7 +23,7 @@
 
 
 
-```shell
+```bash
 sudo  apt -y install php7.4 
 sudo  apt -y install php7.4-fpm
 ```

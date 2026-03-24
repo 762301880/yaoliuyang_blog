@@ -8,7 +8,7 @@
 
 **解决方案**
 
-```shell
+```bash
     # 添加配置 405报错
     error_page  405 =200 @405;
      location @405 {
@@ -21,7 +21,7 @@
 
 > nginx后端服务器nginx配置添加跨域设置
 
-```nginx
+```bash
 add_header Access-Control-Allow-Origin *;
 add_header Access-Control-Allow-Methods 'GET, POST, PUT, DELETE, OPTIONS';
 add_header Access-Control-Allow-Headers 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization,Signtoken,siteid,cityid,,site-id';
@@ -43,7 +43,7 @@ if ($request_method = 'OPTIONS') {
 
 **注意**
 
-```nginx
+```bash
 # 以下这俩不支持通配符*  需要 显式指定允许的请求头
 add_header Access-Control-Allow-Methods
 add_header Access-Control-Allow-Headers

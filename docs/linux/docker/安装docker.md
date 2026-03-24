@@ -8,7 +8,7 @@
 
 ## [centos-linux安装](https://www.runoob.com/docker/centos-docker-install.html)
 
-```shell
+```bash
 # 更新系统软件包：
 sudo yum update -y
 
@@ -32,7 +32,7 @@ sudo systemctl enable docker
 
 **报错**
 
-```shell
+```bash
 Transaction check error:
   file /usr/bin/docker from install of docker-ce-cli-1:24.0.7-1.el7.x86_64 conflicts with file from package docker-common-2:1.13.1-209.git7d71120.el7.centos.x86_64
   file /usr/bin/dockerd from install of docker-ce-3:24.0.7-1.el7.x86_64 conflicts with file from package docker-common-2:1.13.1-209.git7d71120.el7.centos.x86_64
@@ -43,7 +43,7 @@ Error Summary
 
 > 这个错误表明在安装 Docker 时，存在文件冲突。你可以尝试以下方法解决这个问题：
 
-```shell
+```bash
 # 首先，卸载已经安装的 Docker 相关的软件包
 sudo yum remove docker-ce-cli docker-ce-3 docker-ce-2 docker-common
 # 然后，清除 yum 缓存并更新软件包列表
@@ -74,27 +74,27 @@ sudo yum makecache fast
 
 - 通过 uname -r 命令查看你当前的内核版本
 
-```shell
+```bash
 ubuntu@VM-123-64-ubuntu:~$ uname -r
 4.15.0-142-generic
 ```
 
 #### 1.2 更新apt包
 
-```shell
+```bash
 ubuntu@VM-123-64-ubuntu:~$ sudo apt-get update
 ```
 
 #### 1.3 安装docker
 
-```shell
+```bash
 # sudo apt install -y docker.io
 ubuntu@VM-123-64-ubuntu:~$ sudo apt-get install -y docker.io
 ```
 
 #### 1.4 启动docker
 
-```shell
+```bash
 sudo systemctl start docker
 ```
 
@@ -102,26 +102,26 @@ sudo systemctl start docker
 
 1. 添加docker用户组
 
-```shell
+```bash
 sudo groupadd docker
 ```
 
 2. 将登陆用户加入到docker用户组中
 
-```shell
+```bash
 sudo gpasswd -a $USER docker	#USER处是你自己的用户名
 ubuntu@VM-123-64-ubuntu:~$ sudo gpasswd -a ubuntu docker
 ```
 
 3. 更新用户组
 
-```shell
+```bash
 newgrp docker
 ```
 
 ### 二、删除docker
 
-```shell
+```bash
 sudo apt-get remove --auto-remove docker
 
 # 使用dpkg查询已安装包，针对性删除

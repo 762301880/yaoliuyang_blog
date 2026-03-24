@@ -469,7 +469,7 @@ array:703 [▼
 
 **基于gd库直接家政oss图片保存到excel**
 
-```shell
+```bash
  # 导出excel
     public static function exportOrderServiceReserve($data)
     {

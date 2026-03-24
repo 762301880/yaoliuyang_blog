@@ -2,7 +2,7 @@
 
 > 使用swoole的时候经常会看见端口被占用的情况如下所示
 
-```shell
+```bash
 bash-5.0# php bin/hyperf.php start
 
 In Server.php line 170:
@@ -19,7 +19,7 @@ failed to listen server port[0.0.0.0:9802], Error: Address in use[98]
 >
 > -p或--programs 显示正在使用Socket的程序识别码和程序名称。
 
-```shell
+```bash
 bash-5.0# netstat  -anp  |  grep 9802
 tcp        0      0 0.0.0.0:9802            0.0.0.0:*               LISTEN      16/skeleton.Master
 ```
@@ -28,7 +28,7 @@ tcp        0      0 0.0.0.0:9802            0.0.0.0:*               LISTEN      
 
 > 使用***kill***杀死进程
 
-```shell
+```bash
 bash-5.0# kill 16
 bash-5.0# php bin/hyperf.php start
 [INFO] Worker#0 started.

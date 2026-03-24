@@ -8,7 +8,7 @@
 
 
 
-```shell
+```bash
 # 查看 系统默认语言
 [root@VM-16-5-centos ~]# echo $LANG
 en_US.UTF-8          # 此标志就是为英文

@@ -21,7 +21,7 @@
 
 - 使用***composer***安装**laravelS**
 
-```shell
+```bash
 # PHP >=8.2
 composer require "hhxsv5/laravel-s:~3.8.0"
 
@@ -38,7 +38,7 @@ composer require "hhxsv5/laravel-s:~3.4.4"
 
 > 该扩展包具备自动发现功能（Laravel 5.5 以上版本可用），无需手动在 `config/app.php` 配置文件中注册，安装完成后，运行如下 Artisan 命令相应脚本和配置文件发布到根目录下：
 
-```shell
+```bash
 php artisan laravels publish
 # 该命令会发布配置文件 laravels.php 到 config 目录下，以及脚本文件到 bin 目录下：
 # 配置文件：config/laravels.php
@@ -49,7 +49,7 @@ php artisan laravels publish
 
 - ### 启动 LaravelS
 
-```shell
+```bash
 php bin/laravels start
 # 启动后的命令
 yaoliuyang@benben:~/公共的/phpProject/laravel_study$ php bin/laravels start
@@ -101,7 +101,7 @@ Speed up your Laravel/Lumen
 >
 > 如果是在生产环境使用，推荐使用 Supervisor 对 LaravelS 服务进行管理，从而提供服务的稳定性，相应的配置示例如下：
 
-```shell
+```bash
 [program:laravel-s-test]
 command=/user/local/bin/php /path/to/project/bin/laravels start -i
 numprocs=1
@@ -179,7 +179,7 @@ class WebSocketService implements WebSocketHandlerInterface
 
 - 我们还可以在 `swoole` 配置项中配置 WebSocket 长连接的强制关闭逻辑：
 
-```shell
+```bash
 'swoole' => [
     ...
     
@@ -195,7 +195,7 @@ class WebSocketService implements WebSocketHandlerInterface
 
 > 注意踩坑 不可以调用nginx 转发给swoole端口的地址  请直接调用swoole存在的打开的 php端口
 
-```shell
+```bash
     public function sendMessage(Request $request)
     {
         $fd = $request->input("fd");
@@ -214,7 +214,7 @@ class WebSocketService implements WebSocketHandlerInterface
 
 **如果想让nginx转发可以在控制器中请求websocket**
 
-```nginx
+```bash
 gzip on;
 gzip_min_length 1024;
 gzip_comp_level 2;

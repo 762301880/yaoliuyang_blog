@@ -43,7 +43,7 @@ return [
 
 
 
-```shell
+```bash
 $redis=new \think\cache\driver\Redis();
 ```
 
@@ -53,7 +53,7 @@ $redis=new \think\cache\driver\Redis();
 >
 > **<font color='red'>建议封装为单例模式统一调用</font>**
 
-```shell
+```bash
 $redis=new \think\cache\driver\Redis(
 [
         'host'       => '127.0.0.1',
@@ -115,7 +115,7 @@ public function index()
 
 ## 官方reids文档地址
 
-```shell
+```bash
 https://github.com/nicolasff/phpredis
 ```
 

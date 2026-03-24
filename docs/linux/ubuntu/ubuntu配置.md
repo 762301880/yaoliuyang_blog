@@ -25,7 +25,7 @@
 > 6.  **终端欢迎消息**：每次打开新的终端窗口时，系统都会显示一个欢迎消息，其中包含版本信息。 
 > 7.  **查看/etc/os-release文件**：可以使用文本编辑器或命令行工具查看`/etc/os-release`文件中的内容，该文件包含了操作系统的详细版本信息。
 
-```shell
+```bash
 yly@ubuntu:/etc/apt$ lsb_release -a
 No LSB modules are available.
 Distributor ID:	Ubuntu
@@ -36,7 +36,7 @@ Codename:	jammy
 
 ###  **ubuntu 20.04** 镜像源
 
-```shell
+```bash
 deb http://archive.ubuntu.com/ubuntu focal main restricted universe multiverse
 deb-src http://archive.ubuntu.com/ubuntu focal main restricted universe multiverse
 
@@ -56,7 +56,7 @@ deb-src http://archive.ubuntu.com/ubuntu focal-backports main restricted univers
 
 ## 切换root用户
 
-```shell
+```bash
 sudo su root 
 ```
 
@@ -64,14 +64,14 @@ sudo su root
 
 - 打开hosts目录
 
-```shell
+```bash
 cd /etc/
 vim hosts
 ```
 
 - 添加虚拟域名
 
-```shell
+```bash
 127.0.0.1	localhost
 127.0.1.1	yaoliuyang-Lenovo-XiaoXin-310-15IKB
 127.0.0.1   www.cs.com # 自己添加的虚拟域名

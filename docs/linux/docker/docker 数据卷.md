@@ -27,7 +27,7 @@
 
  `docker run -it -v /宿主机绝对路径:/容器内目录：权限   镜像名`
 
-```shell
+```bash
 #
 docker run -itd --name php -v /etc/php:/usr/local/etc/php 容器id
 # windows 本地目录\etc\nginx要使用反斜杠 \
@@ -38,7 +38,7 @@ docker run -itd --name nginx -p 8080:80  -v c:\etc\nginx:/www  容器id
 
 ## 具名挂载&匿名挂载
 
-```shell
+```bash
 # 匿名挂载
 -v 容器内路径 # 不指定主机名直接使用容器内的路径
 docker run -d -p --name nginx  -v /etc/nginx
@@ -53,7 +53,7 @@ local               f8c9a08b96aa846750cfcf5c6d81bd44e7155df5ccfb0e79d72262a422fa
 
 - 具名挂载
 
-```shell
+```bash
 # yaoliuyangs 注意这里不带/ 只是指定名称
 [root@VM-24-20-centos ~]# docker run -d  -v yaoliuyangs:/etc/nginx 4c
 795d5d584d3c5310f288667efb3969208da981bda1cd2e6ef8174830897a2974
@@ -78,7 +78,7 @@ local               yaoliuyangs # 可以看出这里指定可名称
 
 - 如何确定是具名挂载还是匿名挂载
 
-```shell
+```bash
 -v 容器内路径  # 匿名挂载
 -v 卷名:容器内路经 # 具名挂载
 -v /本地路径:容器内路径 # 指定路径挂载
@@ -86,7 +86,7 @@ local               yaoliuyangs # 可以看出这里指定可名称
 
 拓展
 
-```shell
+```bash
 # 启动nginx  数据卷 :ro 意思是 readonly 只读
 [root@VM-24-20-centos ~] docker run -itd --name mynginx -p 8080:80 -v /etc/nginx:/etc/nginx:ro  容器id
 

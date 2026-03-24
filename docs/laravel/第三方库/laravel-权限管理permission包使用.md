@@ -25,27 +25,27 @@
 
 > 在项目根目录执行
 
-```shell
+```bash
 composer require spatie/laravel-permission
 ```
 
 - 发布配置文件
 
-```shell
+```bash
 # 发布配置文件 此命令用于生成  config\permission.php
 php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" --tag="config"
 ```
 
 - 发布迁移文件
 
-```shell
+```bash
 # 生成迁移文件，根据业务需要可以随意添加表字段
 php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider" --tag="migrations"
 ```
 
 - 生成迁移文件，根据业务需要可以随意添加表字段
 
-```shell
+```bash
 php artisan migrate
 # 上述迁移执行之后会在数据库中生成如下表
 roles # 角色表
@@ -57,7 +57,7 @@ model_has_permissions # 用户权限表，用户直接获取权限使用
 
 **对应数据表**
 
-```shell
+```bash
 # roles 角色表
 CREATE TABLE `roles` (
   `id` bigint unsigned NOT NULL AUTO_INCREMENT,
@@ -241,7 +241,7 @@ or
 
 > 利用**[laravel-数据填充](https://learnku.com/docs/laravel/8.x/seeding/9404)** 功能填充对应的权限
 
-```shell
+```bash
 # 这里只简单的演示添加权限数据信息,例如用户创建角色什么的可以自行添加
 
 # 创建填充类
@@ -297,7 +297,7 @@ public function run()
 
 > 记得**注册中间件**
 
-```shell
+```bash
 # 创建中间件
 php artisan make:middleware CheckPermission
 
@@ -317,7 +317,7 @@ public function handle(Request $request, Closure $next)
 
 
 
-```shell
+```bash
 //用户登录
 Route::group(['prefix' => 'auth'], function () {
     Route::any('register', [\App\Http\Controllers\UserAuthController::class, 'register'])->name('auth.register'); //用户注册

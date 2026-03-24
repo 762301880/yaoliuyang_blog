@@ -24,7 +24,7 @@ composer create-project topthink/think=5.1 tp5  --prefer-dist
 
 - 或者直接复制我这个
 
-```shell
+```bash
 /**
  * Class Model
  * @package think

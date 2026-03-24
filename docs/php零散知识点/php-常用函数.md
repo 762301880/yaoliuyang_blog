@@ -156,7 +156,7 @@ return $temp;
 >
 > 还是空字符
 
-```shell
+```bash
         $a1 = '';
         $a2 = '';
         $test = (!empty($a1) & !empty($a2)) ? $a1 . '*' . $a2 : (!empty($a1) ? $a1 : "空");
@@ -173,7 +173,7 @@ return $temp;
 >
 > 反之的话直接返回空字符         
 
-```shell
+```bash
         $a1 = '';
         $a2 = '456';
 
@@ -185,7 +185,7 @@ return $temp;
 
 > 三目虽然好用但是长了自己看着就很头疼还不如回调看着结构清晰
 
-```shell
+```bash
     /**
      * 生成返回pxs_customer_bing_spec标特殊字段返回
      * @param $text1

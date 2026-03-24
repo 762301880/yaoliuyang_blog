@@ -2,13 +2,13 @@
 
   `安装swoole`
 
-  ```shell
+  ```bash
   pecl install swoole
   ```
 
   配置swoole
 
-```shell
+```bash
 # 1. 进入容器内部之后查询配置文件的地址
 root@9afd02d24578:/usr/local/etc/php# find / -name php
 /usr/local/etc/php # 可以看出这个就是配置文件地址的目录

@@ -4,7 +4,7 @@
 
 ### 删除本地分支
 
-```shell
+```bash
 git branch -d 分支名
 
 # 如果要强制删除本地分支，即使它尚未完全合并到其他分支，可以使用以下命令：
@@ -15,7 +15,7 @@ git branch -D 分支名
 
 > 这将从远程仓库中删除指定的分支。请确保在执行此操作之前已经确认了该分支不再需要，并且所有相关的更改都已经合并到其他分支或被丢弃。
 
-```shell
+```bash
 git push origin --delete 分支名
 ```
 
@@ -25,13 +25,13 @@ git push origin --delete 分支名
 
 > 此配置会在本地用户目录下生成`.gitconfig`文件
 * 用户名的配置：
-```shell
+```bash
 # git config --global user.name "用户名称"
 
 git config --global user.name "yaoliuyang"
 ```
 * 邮箱的配置
-```shell
+```bash
  #  git config --global user.email "用户邮箱"
  
  git config --global user.email "762301880@qq.com"
@@ -49,7 +49,7 @@ git config --global user.name "yaoliuyang"
 > id_rsa.pub: 公钥文件，可以安全地分享给需要进行 SSH 认证的服务器。
 > 生成的密钥对可以用于无密码登录远程服务器，提高工作效率
 
-```shell
+```bash
 # 生成密钥
 
 ssh-keygen -t rsa -C "762301880@qq.com"
@@ -81,7 +81,7 @@ ssh-keygen -t rsa -C "762301880@qq.com"
   1. 在项目根目录下创建或编辑` .gitignore` 文件。
   2. 在 `.gitignore` 文件中添加需要忽略的文件或目录路径。例如：
 
-```shell
+```bash
     # 忽略所有 .log 文件
     *.log
 
@@ -96,7 +96,7 @@ ssh-keygen -t rsa -C "762301880@qq.com"
   1. 如果有一些文件是你在多个项目中都不希望被跟踪的，可以设置一个全局的` .gitignore `文件。
   2. 使用以下命令设置全局` .gitignore `文件：
 
-```shell
+```bash
 git config --global core.excludesfile ~/.gitignore_global
 ```
 
@@ -110,7 +110,7 @@ git config --global core.excludesfile ~/.gitignore_global
 
 **定义多个远程仓库：分别为每个 Git 服务器定义一个远程仓库名称，比如 origin 和 mirror 或其他你喜欢的名字**
 
-```shell
+```bash
   git remote add origin git@gitlab.com:yly_python/py_demo.git
   git remote add gitcode git@gitcode.com:yaoliuyang/py_demo.git
   
@@ -142,7 +142,7 @@ git config --global core.excludesfile ~/.gitignore_global
 
 **然后分别推送**
 
-```shell
+```bash
   git push origin main
   git push mirror main
 ```

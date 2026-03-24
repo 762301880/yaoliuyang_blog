@@ -90,7 +90,7 @@ public function getAccessToken()
 
 - 结果示例
 
-```shell
+```bash
 array:6 [
   "error_code" => 0
   "error_msg" => "SUCCESS"
@@ -273,7 +273,7 @@ public function imageConversionAnime(Request $request)
 
 **代码示例**
 
-```shell
+```bash
  public function discern(Request $request)
     {
         $token = $this->getAccessToken();

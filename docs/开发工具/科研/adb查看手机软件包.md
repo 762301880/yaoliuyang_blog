@@ -38,7 +38,7 @@ vivo手机   **系统管理>开发者选项>USB调试**
 
    - 输入以下命令列出所有已安装的应用及其包名：
 
-     ```shell
+     ```bash
      adb shell pm list packages
      #  写入到磁盘
      adb shell pm list packages  > d:packagelist.txt
@@ -46,7 +46,7 @@ vivo手机   **系统管理>开发者选项>USB调试**
 
      如果你想查找特定应用的包名，可以使用 grep 命令进行过滤，例如：
 
-     ```shell
+     ```bash
      adb shell pm list packages | grep com.example
      ```
 
@@ -70,7 +70,7 @@ vivo手机   **系统管理>开发者选项>USB调试**
 
 ##  控制手机刷视频
 
-```shell
+```bash
 #!/bin/bash
 
 # 颜色定义
@@ -210,7 +210,7 @@ done
 
 ## 常用命令
 
-```shell
+```bash
 # 获取屏幕分辨率（宽x高）  例如输出Physical size: 1080x2340，表示屏幕宽度 1080 像素，高度 2340 像素。
 adb shell wm size
 
@@ -247,7 +247,7 @@ adb shell getprop ro.build.version.release
 >
 > 打开电脑终端，输入以下命令：
 
-```shell
+```bash
 # 命令
 adb pair <手机IP地址>:<端口号>
 
@@ -319,7 +319,7 @@ adb pull /sdcard/ui.xml ./
 
 首先，使用以下命令查看当前连接的设备和模拟器：
 
-```shell
+```bash
 C:\Users\铺先生技术研发中心>adb devices
 List of devices attached
 192.168.110.108:34701   offline
@@ -328,7 +328,7 @@ List of devices attached
 
 **关闭多余的模拟器**
 
-```shell
+```bash
 adb disconnect
 ```
 

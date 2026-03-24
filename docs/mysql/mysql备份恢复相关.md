@@ -13,7 +13,7 @@
 
 
 
-```shell
+```bash
 wget https://github.com/mydumper/mydumper/archive/refs/tags/v0.15.1-1.tar.gz
 
 tar -zxvf v0.15.1-1.tar.gz
@@ -34,21 +34,21 @@ mydumper --version
 1. 安装编译依赖性：
    在编译前，需要安装一些依赖包和开发工具。执行以下命令以安装这些依赖项：
 
-```shell
+```bash
 yum install -y cmake gcc glib2-devel mysql-devel zlib-devel
 ```
 
 1. 下载mydumper源代码：
    通过以下命令下载mydumper源代码：
 
-```shell
+```bash
 wget https://github.com/maxbube/mydumper/archive/refs/tags/v0.9.5.tar.gz
 ```
 
 1. 解压和编译源代码：
    执行以下命令解压并编译源代码：
 
-```shell
+```bash
 tar -zxvf v0.9.5.tar.gz
 cd mydumper-0.9.5/
 cmake .
@@ -79,7 +79,7 @@ mydumper --help
 
 ### 导入
 
-```shell
+```bash
 # 导入示例
  myloader -u yao_test -p H5ZKdTcr7s2Hjsy7 -B yao_test -d /data/backup -o
 ```
@@ -129,7 +129,7 @@ mydumper --help
 
 **解决示例**
 
-```shell
+```bash
 [root@iZwz9fhv99le4f935sqr8rZ mydumper-0.9.5]# cmake .
 cmake: symbol lookup error: cmake: undefined symbol: archive_write_add_filter_zstd
 

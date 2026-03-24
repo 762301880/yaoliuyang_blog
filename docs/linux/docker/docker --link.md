@@ -30,7 +30,7 @@ PING php (172.17.0.7) 56(84) bytes of data.
 >
 > 思考一个场景,我们编写了一个微服务,database  url=ip:,项目不重启,数据库ip换掉了,我们希望可以处理这个问题,可以名字来进行访问容器?
 
-```shell
+```bash
 # 下载tomcat镜像
 [root@VM-16-5-centos ~]# docker pull tomcat:9.0
 

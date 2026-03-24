@@ -161,7 +161,7 @@ Query OK, 0 rows affected (0.00 sec)
 >
 > 文件打开**redis.conf**，然后把**bind 127.0.0.1 改为 bind 0.0.0.0**，最后重启**redis**
 
-```shell
+```bash
 # bind 127.0.0.1 改为 bind 0.0.0.0
 bind 0.0.0.0
 port 6379

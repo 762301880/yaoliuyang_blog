@@ -11,7 +11,7 @@
 
 ### 在容器中使用composer命令安装
 
-```shell
+```bash
 composer require hyperf/websocket-server
 ```
 
@@ -19,7 +19,7 @@ composer require hyperf/websocket-server
 
 > 修改 `config/autoload/server.php`，增加以下配置。
 
-```shell
+```bash
 <?php
 
 return [
@@ -65,7 +65,7 @@ Router::addServer('ws', function () {
 
 ### 创建对应控制器
 
-```shell
+```bash
 <?php
 declare(strict_types=1);
 

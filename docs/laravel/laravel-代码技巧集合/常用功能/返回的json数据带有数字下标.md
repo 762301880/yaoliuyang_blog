@@ -4,7 +4,7 @@
 >
 > 参考资料 ：https://www.php.cn/wenda/1913.html
 
-```shell
+```bash
 <?php
 
 $arr = array(
@@ -20,7 +20,7 @@ echo json_encode($arr);
 
 **打印结果**
 
-```shell
+```bash
 {"1":{"name":"test1"},"2":{"name":"test1"},"3":{"name":"test1"},"4":{"name":"test1"},"5":{"name":"test1"}}
 ```
 
@@ -28,7 +28,7 @@ echo json_encode($arr);
 
 > 值获取数组中值的key即可
 
-```shell
+```bash
 <?php
 
 $arr = array(

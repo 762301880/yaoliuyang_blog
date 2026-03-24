@@ -10,13 +10,13 @@
 
 例子可以参考
 
-```shell
+```bash
 项目根目录/vendor/laravel/framework/src/Illuminate/Cache/CacheServiceProvider.php
 ```
 
 基础绑定
 
-```shell
+```bash
 # HelpSpot\API 可以是任意名称语义化，此绑定每次使用都会实例化
 $this->app->bind('HelpSpot\API', function ($app) {
     return new HelpSpot\API($app->make('HttpClient'));
@@ -25,7 +25,7 @@ $this->app->bind('HelpSpot\API', function ($app) {
 
 绑定单例
 
-```shell
+```bash
 # 第一次绑定之后下次调用的时候不会再次绑定实例化会采用上一
 $this->app->singleton('HelpSpot\API', function ($app) {
     return new HelpSpot\API($app->make('HttpClient'));

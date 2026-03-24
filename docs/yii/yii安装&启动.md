@@ -14,13 +14,13 @@
 
 ## [安装](https://www.yiichina.com/download)
 
-```shell
+```bash
 composer create-project yiisoft/yii2-app-basic  项目名称
 ```
 
 ## 搭建虚拟域名访问
 
-```shell
+```bash
 # 将虚拟域名指向  /web目录下就行 
 
 # yii内置服务器启动

@@ -1,12 +1,12 @@
 # 首先命令安装rar
 
-```shell
+```bash
 sudo apt install rar
 ```
 
 # 使用rar
 
-```shell
+```bash
 # 解压：
 rar x FileName.rar
 # 压缩：

@@ -20,7 +20,7 @@ https://blog.csdn.net/ljh101/article/details/108806075
 
 ## [1.4 微信测试号申请](https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login)
 
-```shell
+```bash
     https://mp.weixin.qq.com/debug/cgi-bin/sandbox?t=sandbox/login
 ```
 
@@ -281,7 +281,7 @@ https://developers.weixin.qq.com/doc/offiaccount/Account_Management/Generating_a
 
 - 先采用curl上传实验
 
-```shell
+```bash
 # 将图片放在电脑桌面采用curl上传实验-可以看出官方提供的接口是ok的
 Administrator@PC-20200506AVAU MINGW64 ~/Desktop
 $  curl -F media=@a.jpg "https://api.weixin.qq.com/cgi-bin/media/upload?access_token=你的token&type=image"

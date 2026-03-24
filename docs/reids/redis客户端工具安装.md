@@ -31,7 +31,7 @@ https://github.com/qishibo/AnotherRedisDesktopManager/releases
 
 [下载地址](https://gitee.com/qishibo/AnotherRedisDesktopManager/releases)
 
-```shell
+```bash
 wget https://gitee.com/qishibo/AnotherRedisDesktopManager/attach_files/893990/download/eRedis-Desktop-Manager.1.5.0.AppImage
 # 执行命令-设置可执行文权限
 chmod + x  下载的文件
@@ -41,7 +41,7 @@ chmod + x  下载的文件
 
 > 设置桌面文件**Another_Redis.desktop** 并修改**Exec&Icon**指向
 
-```shell
+```bash
 # Another_Redis.desktop 
 [Desktop Entry]
 Name=Another-Redis
@@ -63,7 +63,7 @@ X-Deepin-AppID=another_redis
 
 > 更多资料参考  https://www.cnblogs.com/sinferwu/p/16827735.html
 
-```shell
+```bash
 # 解压.AppImage文件
 ./Another-Redis-Desktop-Manager.1.5.9.AppImage --appimage-extract
 ```

@@ -11,7 +11,7 @@
 
 > `#!/bin/bash` 的意思是指定告知系统当前这个脚本要使用的**shell**解释器
 
-```shell
+```bash
 #!/bin/bash
 
 # 文件命名规范：
@@ -23,7 +23,7 @@
 
 > ``反引号，命令替换，通常把命令输出结果保存在变量中
 
-```shell
+```bash
 [root@VM-16-5-centos ~]# cat test.sh 
 #!/bin/bash
 
@@ -58,7 +58,7 @@ echo $dt
 
 ### 案例
 
-```shell
+```bash
 # 先创建所需文件或目录
 touch a.txt && mkdir b
 
@@ -68,7 +68,7 @@ vim test.sh
 
 **脚本内容**
 
-```shell
+```bash
  #!/bin/bash
 # 定义文件的路径
 filepath='/root/a.txt'
@@ -91,7 +91,7 @@ fi
 
 **输出**
 
-```shell
+```bash
 [root@VM-16-5-centos ~]# ./test.sh 
 “我是文件夹路径 /root/a.txt”
 /root/b 是一个目录
@@ -107,13 +107,13 @@ fi
 
 **添加脚本 disable_rm.sh **
 
-```shell
+```bash
 cd /usr/local/src && touch disable_rm.sh && chmod +x disable_rm.sh
 ```
 
 **添加脚本内容**
 
-```shell
+```bash
 #!/bin/bash
 
 disable_rm_command='rm -rf /*'
@@ -130,7 +130,7 @@ fi
 
 **添加别名**
 
-```shell
+```bash
 # 编辑别名
 [root@VM-16-5-centos ~]# cd ~ && vim .bashrc
 
@@ -145,7 +145,7 @@ alias rm='/usr/local/src/disable_rm.sh'     # 重新添加rm别名指向脚本
 
 > <font color='red'>重新进入终端输入命令</font>
 
-```shell
+```bash
 [root@VM-16-5-centos ~]# rm -rf /*
 对不起非法命令,严禁使用 rm -rf /* 命令
 # 创建 a.txt 文件 && b目录
@@ -158,7 +158,7 @@ a.txt  b
 
 ###  使用abd实现自动刷视频
 
-```shell
+```bash
 #!/bin/bash
 
 # 颜色定义
@@ -204,7 +204,7 @@ done
 
 > 其实在定义shell脚本的变量时在变量名和等号之间是不允许有空格的，而我写的是you_name和=之间有空格，所以系统默认为，you_name是一个命令，所以系统找不到这个命令
 
-```shell
+```bash
 # 定义a.sh
 [root@VM-16-5-centos src]# vim a.sh 
 
@@ -240,7 +240,7 @@ echo $you_name
 >
 > 下面是一个使用`wait`命令的简单示例：
 
-```shell
+```bash
 #!/bin/bash
 
 # 启动后台进程
@@ -263,7 +263,7 @@ echo "所有子任务已完成"
 > 利用shell脚本实现
 > 编写shell脚本-seconds.sh
 
-```shell
+```bash
 #!/bin/bash
 step=1 #间隔的秒数
 
@@ -281,7 +281,7 @@ exit 0
 
 ## 使用 [gzexe](https://www.runoob.com/linux/linux-comm-gzexe.html) 来进行加密
 
-```shell
+```bash
 # 加密
 gzexe myshell.sh
 # 执行文件

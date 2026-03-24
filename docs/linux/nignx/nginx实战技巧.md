@@ -10,7 +10,7 @@
 >
 > <font color='red'>注意 /root   不要挂载到这个文件夹下</font>
 
-```shell
+```bash
 server {
 	    listen 8089; # 设置端口 
 	    server_name localhost; # 对应域名或公网ip地址_默认域名是localhost
@@ -25,7 +25,7 @@ server {
 
 **最后记得重启 nginx**
 
-```nginx
+```bash
 systemctl restart nginx
 ```
 
@@ -52,7 +52,7 @@ systemctl restart nginx
 >
 > 允许超长连接  https://nginx.p2hp.com/en/docs/http/ngx_http_proxy_module.html#proxy_read_timeout
 
-```nginx
+```bash
 server {
     listen 80; # 监听端口，根据需要进行更改
     server_name your_domain.com; #  # 替换为你的域名或ip地址

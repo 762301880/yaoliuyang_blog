@@ -15,7 +15,7 @@
 1. 在远程服务器上设置好SSH密钥，以便GitLab能够访问远程仓库并自动推送代码。
 2. 在GitLab项目中，创建一个.gitlab-ci.yml文件，并配置需要执行的CI流程。这里，我们可以使用rsync命令将代码推送到远程服务器。以下是一个简单的示例：
 
-```shell
+```bash
 # 定义使用的Docker镜像
 image: alpine:latest
 # 定义工作流的阶段
@@ -57,7 +57,7 @@ deploy:
 >
 > sshpass是一个命令行工具，用于自动化通过SSH连接进行认证的过程。它可以避免在远程服务器上手动输入密码或交互式地输入密码。此工具使用了一种非常简单的方法，只需将密码直接传递给SSH客户端，从而允许自动化SSH连接。sshpass的语法为：
 >
-> ```shell
+> ```bash
 > sshpass [-f|-d|-P|-e] [-hV] ssh_options command
 > # 例子
 > sshpass -p password ssh user@hostname
@@ -86,7 +86,7 @@ deploy:
 >
 > 这样，你可以通过SSH连接执行`docker exec`命令，并列出`php7.4-fpm`容器中的文件列表。记住，由于没有使用交互式终端，可能需要适当调整命令以适应非交互式执行，并且某些命令的行为可能会有所不同。
 
-```shell
+```bash
   # 定义部署任务
   script:
     - sshpass -p "$SSH_PASSWORD" ssh -o StrictHostKeyChecking=no $SSH_USER@$SSH_HOST "cd $REMOTE_DIRECTORY && git pull origin develop && docker exec php7.4-fpm supervisorctl restart all"
@@ -130,7 +130,7 @@ deploy:
 
 报错请安装**openssh-client**
 
-```shell
+```bash
 /code # apk add openssh-client
 (1/4) Installing openssh-keygen (8.8_p1-r1)
 (2/4) Installing libedit (20210910.3.1-r0)

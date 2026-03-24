@@ -74,7 +74,7 @@ public function randNum($type=null){
 
 ##  **请求返回对应的图片**
 
-```shell
+```bash
 # 请求接口
 https://shop.bangsales.com/api/user/account/sendSms?mobile=17538397579&sms_type=login&src=ZXZ
 ```
@@ -85,7 +85,7 @@ https://shop.bangsales.com/api/user/account/sendSms?mobile=17538397579&sms_type=
 >
 > **anser**  是所有的答案选项
 
-```shell
+```bash
 {
   "code": 200,
   "msg": "success",
@@ -106,7 +106,7 @@ https://shop.bangsales.com/api/user/account/sendSms?mobile=17538397579&sms_type=
 
 ## 提交请求
 
-```shell
+```bash
 https://shop.bangsales.com/api/user/account/sendSms?mobile=17538397579&sms_type=login&pic=https%3A%2F%2Fshop.bangsales.com%2Fapi%2Fuser%2Fimages%2FpicVerify%2F953c9fd2136f1abb4fc9280bb359eadf%2F1642003216674a748fde4645.14611068.png&src=ZXZ
 ```
 

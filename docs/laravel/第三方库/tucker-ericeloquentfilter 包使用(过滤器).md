@@ -17,19 +17,19 @@
 
 - 使用composer安装
 
-```shell
+```bash
 composer require tucker-eric/eloquentfilter
 ```
 
 - `发布配置文件`
 
-```shell
+```bash
 php artisan vendor:publish --provider="EloquentFilter\ServiceProvider"
 ```
 
 - `在`config/eloquentfilter.php`配置文件中设置模型过滤器将驻留的名称空间：`
 
-```shell
+```bash
 'namespace' => "App\\ModelFilters\\",
 ```
 
@@ -39,7 +39,7 @@ php artisan vendor:publish --provider="EloquentFilter\ServiceProvider"
 
 - 使用artisan 命令
 
-  ```shell
+  ```bash
   php artisan model:filter +你的模型过滤器名称  # 此命令会在`App\ModelFilters目录下为你生成一个过滤逻辑文件
   ```
 
@@ -84,7 +84,7 @@ php artisan vendor:publish --provider="EloquentFilter\ServiceProvider"
 
 ## 2.4 常用方法
 
-````shell
+````bash
 public function setup() # 此方法中的逻辑会优先处理  相当于 __construct() 构造函数默认调用
 {
  if (!empty($this->input('start_time')) && !empty($this->input('end_time'))) { # 例如我们可以增加逻辑查询

@@ -23,7 +23,7 @@
 
 **依次安装**
 
-```shell
+```bash
 # 更新软件列表
 sudo apt-get update 
 # 安装更新并	识别出当依赖

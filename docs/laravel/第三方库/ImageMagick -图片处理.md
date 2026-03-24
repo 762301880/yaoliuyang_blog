@@ -24,7 +24,7 @@
 
 **centos**
 
-```shell
+```bash
 sudo yum update -y
 sudo yum groupinstall "Development Tools" -y
 sudo yum install epel-release -y
@@ -42,13 +42,13 @@ sudo yum install libtool -y
 
 **安装c编译器**
 
-```shell
+```bash
 yum -y install gcc g++ gcc-c++
 ```
 
 **安装并编译**
 
-```shell
+```bash
 # 下载安装imagemagick(软件)
 # linux 安装教程 http://www.imagemagick.org/script/install-source.php#linux
 #wget https://download.imagemagick.org/ImageMagick/download/ImageMagick-7.1.0-18.tar.gz
@@ -108,7 +108,7 @@ extension=imagick.so
 
 ![image-20240518134811163](https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/image-20240518134811163.png)
 
-```shell
+```bash
 [root@92201f5a71ce php]# netstat -anp | grep 9000
 tcp        0      0 127.0.0.1:9000          0.0.0.0:*               LISTEN      113937/php-fpm: mas 
 [root@92201f5a71ce php]# kill 113937
@@ -120,7 +120,7 @@ tcp        0      0 127.0.0.1:9000          0.0.0.0:*               LISTEN      
 
 > 添加**/etc/nginx/conf.d/127.0.0.1.conf**
 
-```shell
+```bash
 server {
     listen 80;
     server_name  127.0.0.1;
@@ -161,7 +161,7 @@ server {
 
 **查看扩展是否安装成功**
 
-```shell
+```bash
 [root@92201f5a71ce etc]# php -m
 [PHP Modules]
 ..........
@@ -291,25 +291,25 @@ CentOS提供了Software Collections（SCL），它包含了更新的开发工具
 
 1. **安装SCL存储库**：
 
-   ```shell
+   ```bash
    sudo yum install centos-release-scl
    ```
 
 2. **安装开发工具集**（例如devtoolset-9包含GCC 9）：
 
-   ```shell
+   ```bash
    sudo yum install devtoolset-9
    ```
 
 3. **启用新安装的GCC**： 要在当前会话中使用新的GCC版本，可以使用`scl`命令：
 
-   ```shell
+   ```bash
    scl enable devtoolset-9 bash
    ```
 
    这将启动一个新的bash会话，其中包含了新的GCC版本。可以通过以下命令验证GCC版本：
 
-   ```shell
+   ```bash
    gcc --version
    ```
 
@@ -319,14 +319,14 @@ CentOS提供了Software Collections（SCL），它包含了更新的开发工具
 
 1. **安装依赖项**：
 
-   ```shell
+   ```bash
    sudo yum groupinstall 'Development Tools'
    sudo yum install wget
    ```
 
 2. **下载GCC源代码**： 从GNU官方网站下载需要的GCC版本：
 
-   ```shell
+   ```bash
    wget http://ftp.gnu.org/gnu/gcc/gcc-<version>/gcc-<version>.tar.gz
    tar -xzf gcc-<version>.tar.gz
    cd gcc-<version>
@@ -334,13 +334,13 @@ CentOS提供了Software Collections（SCL），它包含了更新的开发工具
 
 3. **下载GCC依赖项**：
 
-   ```shell
+   ```bash
    ./contrib/download_prerequisites
    ```
 
 4. **创建构建目录并配置**：
 
-   ```shell
+   ```bash
    mkdir build
    cd build
    ../configure --prefix=/usr/local/gcc-<version> --enable-languages=c,c++ --disable-multilib
@@ -348,20 +348,20 @@ CentOS提供了Software Collections（SCL），它包含了更新的开发工具
 
 5. **编译和安装**：
 
-   ```shell
+   ```bash
    make -j$(nproc)
    sudo make install
    ```
 
 6. **更新路径**： 将新的GCC添加到PATH中，可以将以下内容添加到你的`.bashrc`或`.bash_profile`中：
 
-   ```shell
+   ```bash
    export PATH=/usr/local/gcc-<version>/bin:$PATH
    ```
 
    然后重新加载配置文件：
 
-   ```shell
+   ```bash
    source ~/.bashrc
    ```
 
@@ -371,14 +371,14 @@ CentOS提供了Software Collections（SCL），它包含了更新的开发工具
 
 1. **添加第三方存储库**（例如通过安装EPEL和City-fan存储库）：
 
-   ```shell
+   ```bash
    sudo yum install epel-release
    sudo yum install https://www.city-fan.org/ftp/contrib/yum-repo/city-fan.org-release-1-13.rhel7.noarch.rpm
    ```
 
 2. **安装GCC**：
 
-   ```shell
+   ```bash
    sudo yum install gcc
    ```
 
@@ -386,6 +386,6 @@ CentOS提供了Software Collections（SCL），它包含了更新的开发工具
 
 安装完成后，通过以下命令验证GCC版本：
 
-```shell
+```bash
 gcc --version
 ```

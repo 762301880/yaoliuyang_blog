@@ -14,7 +14,7 @@
 
 ### **Pre-req.**中添加代码  [加到全局pre-req里面](#postman全局 Pre-request Script)
 
-```shell
+```bash
 //  去除json参数注释方法
 GlobalJsonMinify = function (json) {
 
@@ -97,7 +97,7 @@ pm.request.body.raw = GlobalJsonMinify(pm.request.body.raw)
 
 ## **设置变量**
 
-```shell
+```bash
 // 响应结果
 const response = JSON.parse(responseBody)
 //在控制台打印结果（在postman软件底部 Console 标签查看）
@@ -128,7 +128,7 @@ console.log(response);
 
 ![1642391519(1).jpg](https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/O4Eqz8dw2jPYXVA.png)
 
-```shell
+```bash
 // 响应结果
 const response = JSON.parse(responseBody)
 //在控制台打印结果（在postman软件底部 Console 标签查看）

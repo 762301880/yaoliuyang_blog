@@ -9,13 +9,13 @@
 
 **安装**
 
-```shell
+```bash
 curl https://rclone.org/install.sh | sudo bash
 ```
 
 **安装成功提示**
 
-```shell
+```bash
 Processing manual pages under /usr/local/man...
 mandb: can't update index cache /var/cache/man/oldlocal/1855092: No such file or directory
 Updating index cache for path `/usr/local/man/man1'. Wait...mandb: warning: /usr/local/man/man1/rclone.1: whatis parse for rclone(1) failed
@@ -36,7 +36,7 @@ Now run "rclone config" for setup. Check https://rclone.org/docs/ for more detai
 
 **设置**
 
-```shell
+```bash
 root@yaoliuyang:/# rclone config 
 No remotes found, make a new one?
 n) New remote
@@ -256,7 +256,7 @@ e/n/d/r/c/s/q> q        # q 退出
 
 **查看rclone配置**
 
-```shell
+```bash
 root@yaoliuyang:~# rclone config show
 [aliyun]
 type = webdav
@@ -283,7 +283,7 @@ bearer_token = eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJhYWEyYzdkZmZhMTk0
 > 6. `--allow-non-empty`: 这个参数允许挂载非空的文件夹。
 > 7. `--uid 0 --gid 0`: 这两个参数分别设置了挂载点的所有者和组ID，这里设置为0表示使用root用户和组。
 
-```shell
+```bash
 rclone mount aliyun:/ /www/aliyun --cache-dir /tmp --allow-other --vfs-cache-mode writes --allow-non-empty --uid 0 --gid 0
 
 
@@ -304,7 +304,7 @@ nohup  rclone mount aliyun:/ /www/aliyun --cache-dir /tmp --allow-other --vfs-ca
 
 
 
-```shell
+```bash
 root@yaoliuyang:/www/aliyun# rclone mount aliyun:/ /www/aliyun --cache-dir /tmp --allow-other --vfs-cache-mode writes --allow-non-empty 
 2023/12/16 16:21:16 mount helper error: fusermount3: failed to access mountpoint /www/aliyun: Transport endpoint is not connected
 2023/12/16 16:21:16 Fatal error: failed to mount FUSE fs: fusermount: exit status 1
@@ -314,7 +314,7 @@ root@yaoliuyang:/www/aliyun# rclone mount aliyun:/ /www/aliyun --cache-dir /tmp 
 
 > 注意此时不能有任何多余的终端正在操作目录**/www/aliyun**
 
-```shell
+```bash
 fusermount -u /www/aliyun
 ```
 
@@ -332,7 +332,7 @@ fusermount -u /www/aliyun
 >
 > **Rclone 加上--header "Referer:" 完美解决**
 
-```shell
+```bash
 nohup rclone --header "Referer:" mount aliyun:/ /www/aliyun --cache-dir /tmp --allow-other --vfs-cache-mode writes --allow-non-empty --uid 0 --gid 0  &
 ```
 

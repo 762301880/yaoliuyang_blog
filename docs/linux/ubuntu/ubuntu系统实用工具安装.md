@@ -46,13 +46,13 @@ sudo dpkg -i  wps-office_11.1.0.10161_amd64.deb
 
 ## 3.2安装qq音乐
 
-```shell
+```bash
 sudo dpkg -i qqmusic_1.0.9_amd64.deb
 ```
 
 ## 3.3 卸载qq音乐
 
-```shell
+```bash
 sudo dpkg -r qqmusic
 ```
 
@@ -66,13 +66,13 @@ sudo dpkg -r qqmusic
 
 ## 4.1  从网络下载deb包
 
-```shell
+```bash
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 ```
 
 ## 4.2 安装
 
-```shell
+```bash
 sudo dpkg -i  google-chrome-stable_current_amd64.deb
 ```
 
@@ -82,7 +82,7 @@ sudo dpkg -i  google-chrome-stable_current_amd64.deb
 
 - 下载桌面版安装
 
-```shell
+```bash
 sudo dpkg -i sunloginclient-11.0.0.36662-amd64.deb 
 ```
 

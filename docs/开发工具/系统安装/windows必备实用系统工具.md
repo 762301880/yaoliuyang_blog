@@ -31,7 +31,7 @@
 >
 > 在**[Microsoft商店的在线链接生成器](https://store.rg-adguard.net/)**中输入以下链接并安装
 
-```shell
+```bash
 https://www.microsoft.com/en-us/p/hevc-video-extensions-from-device-manufacturer/9n4wgh0z6vhq
 ```
 
@@ -90,7 +90,7 @@ https://www.speed2.net/pcsoft/1223240.html
 
 > https://blog.csdn.net/q20010619/article/details/120660346
 
-```shell
+```bash
 # 更新 wsl
 wsl --update
 ## 将 wsl 版本设置为 wsl2
@@ -111,7 +111,7 @@ wsl --install
 
 
 
-```shell
+```bash
 # 进入wsl  输入命令 wsl
 PS C:\Users\铺先生技术研发中心> wsl
 yaoliuyang@DESKTOP-GHQ23UN:/mnt/c/Users/铺先生技术研发中心$
@@ -162,7 +162,7 @@ sudo service ssh restart
 
 以管理员权限打开cmd，输入一下命令，然后重启，
 
-```shell
+```bash
 bcdedit /set hypervisorlaunchtype auto
 ```
 
@@ -172,7 +172,7 @@ bcdedit /set hypervisorlaunchtype auto
 
 题外话：此命令执行后，VMware就不能很好兼容了，鱼和熊掌不可兼得，若想完美使用VMware，管理员执行以下命令关闭即可。
 
-```shell
+```bash
 bcdedit /set hypervisorlaunchtype off
 ```
 
@@ -204,13 +204,13 @@ bcdedit /set hypervisorlaunchtype off
 在控制泰中输入下方代码，回车，显示操作成功
 开启旧版右键菜单：
 
-```shell
+```bash
 reg add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
 ```
 
 恢复windows11新版右键菜单：
 
-```shell
+```bash
 reg delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f
 ```
 
@@ -271,7 +271,7 @@ reg delete "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" 
 
 **使用**
 
-```shell
+```bash
 adb.exe devices
 scrcpy.exe --video-codec=h265 --max-size=800 --max-fps=60 --no-audio --window-title='phone'
 ```
@@ -435,7 +435,7 @@ https://github.com/phaselden/FlipIt
 >
 >      - 所有更新的暂停过期时间：2042 年 9 月 5 日
 
-```shell
+```bash
 Windows Registry Editor Version 5.00
 
 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings]

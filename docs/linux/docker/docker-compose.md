@@ -51,7 +51,7 @@
 >
 > 下载之后手动上传服务器
 
-```shell
+```bash
 #----------------------------------不建议试用国外镜像----------------------------------------
 # 运行以下命令以下载 Docker Compose 的当前稳定版本
 
@@ -90,7 +90,7 @@ chmod +x /usr/local/bin/docker-compose
 
 **菜鸟教程案例**
 
-```shell
+```bash
 # yaml 配置实例
 version: '3'
 services:
@@ -134,7 +134,7 @@ volumes:
 1. 文件名 composetest
 2. 服务
 
-```shell
+```bash
 version: '3'
 services:
   web:
@@ -178,7 +178,7 @@ services:
 >
 > 这表示当有请求到达服务器的 80 端口时，并且请求的域名是 `localhost` 时，Nginx 将使用这个服务器块中的配置来处理该请求。在这个例子中，处理请求的是 `location /` 中的配置，这是一个简单的示例，实际上可以包含更多配置指令。
 
-```shell
+```bash
 server {
     listen 80;
     server_name localhost;
@@ -231,7 +231,7 @@ server {
 
 >  里面配置对应的项目的定时任务
 
-```shell
+```bash
 * * * * * cd /data/work/laravel_study && php artisan schedule:run >> /dev/null 2>&1
 ```
 
@@ -239,7 +239,7 @@ server {
 
 > 启动项目所需脚本
 
-```shell
+```bash
 #!/bin/sh
 
 
@@ -266,7 +266,7 @@ wait
 
 ### **Dockerfile**
 
-```shell
+```bash
 # 设置基础镜像
 FROM php:7.4-fpm
 
@@ -333,7 +333,7 @@ CMD ["/bin/start_service.sh"]
 
 ### **docker-compose.yml**
 
-```shell
+```bash
 version: '3'
 
 services:
@@ -492,7 +492,7 @@ docker system prune -f
 
 **结合使用**
 
-```shell
+```bash
 docker-compose up -d && docker system prune -f
 ```
 
@@ -500,7 +500,7 @@ docker-compose up -d && docker system prune -f
 
 > 这将会删除所有已经停止的容器，删除所有构建的镜像，删除所有卷，并删除所有孤儿容器。之后你可以重新运行 `docker-compose up -d` 命令重新构建和启动所有服务。
 
-```shell
+```bash
 docker-compose down --rmi all --volumes --remove-orphans
 ```
 
@@ -553,7 +553,7 @@ docker-compose down --rmi all --volumes --remove-orphans
 
    在 `program.conf` 文件中，你可以定义每个程序的配置。例如：
 
-   ```conf
+   ```bash
    [program:program1]
    command=/path/to/program1
    
@@ -645,7 +645,7 @@ networks:
 
 > linux cron定时任务 * * * * * echo 222222 >> aaa.txt 这种可以执行 * * * * * echo $(date '+%Y-%m-%d %X') >> ~/test_cron.txt 这种不能执行
 
-```shell
+```bash
 您好！根据您提供的信息，似乎第一个命令可以正常执行，但第二个命令无法执行。
 
 根据您提供的第二个命令：`* * * * * echo $(date '+%Y-%m-%d %X') >> ~/test_cron.txt`，这是一个将当前时间追加到`test_cron.txt`文件中的命令。
@@ -686,7 +686,7 @@ networks:
 
    > 在**crontab -e**中添加
 
-   ```shell
+   ```bash
    PATH=/your/custom/path:/usr/local/bin:/usr/bin:/bin
    
    # /your/custom/path 是指你环境变量的位置

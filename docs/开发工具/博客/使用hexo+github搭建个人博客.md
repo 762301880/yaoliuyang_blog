@@ -28,25 +28,25 @@
 
 > 使用npm命令安装hexo
 
-```shell
+```bash
 npm install -g hexo-cli 
 ```
 
 > 将 Hexo 所在的目录下的 `node_modules` 添加到环境变量之中即可直接使用 `hexo <command>`
 
-```shell
+```bash
 echo 'PATH="$PATH:./node_modules/.bin"' >> ~/.profile
 ```
 
 > 安装完成之后检查是否安装成功
 
-```shell
+```bash
 hexo -v
 ```
 
 > 出现以下命令则安装成功
 
-```shell
+```bash
 hexo-cli: 4.2.0
 os: Windows_NT 10.0.18363 win32 x64
 node: 14.15.1
@@ -73,7 +73,7 @@ unicode: 13.0
 
 > 初始化一个项目
 
-```shell
+```bash
 hexo init <folder> #<folder>等于你的文件夹名称
 ```
 
@@ -83,7 +83,7 @@ hexo init <folder> #<folder>等于你的文件夹名称
 
 在本地查看hexo博客
 
-```shell
+```bash
 hexo s
 # 显示结果
 INFO  Validating config
@@ -105,7 +105,7 @@ INFO  Hexo is running at http://localhost:4000 . Press Ctrl+C to stop.
 >
 > 在项目的根目录中执行命令=>此命令会在thems目录中将拉取到的代码命名为stun
 
-```shell
+```bash
 git clone git@github.com:liuyib/hexo-theme-stun.git themes/stun
 ```
 
@@ -117,7 +117,7 @@ git clone git@github.com:liuyib/hexo-theme-stun.git themes/stun
 >
 > 在项目中执行命令
 
-```shell
+```bash
 npm install --save hexo-renderer-pug
 ```
 
@@ -129,7 +129,7 @@ npm install --save hexo-renderer-pug
 >
 > 打开_config.yml文件
 
-```shell
+```bash
 language: zh-CN         # 将语言修改为中文 此文件可以在下载的主题包中\themes\stun\languages中有对应的文件
 theme: stun             # stun 等于你下载的主题包
 hexo clean && hexo s    # 启动hexo 启动之后再次打开域名 localhost:4000您就可以看见新的主题了
@@ -147,7 +147,7 @@ hexo clean && hexo s    # 启动hexo 启动之后再次打开域名 localhost:40
 
 在项目中使用git命令将项目同步到github
 
-```shell
+```bash
 git init
 git add .
 git commit -m "init"
@@ -159,7 +159,7 @@ git push -u origin master
 
 ### 4.2.1  配置__config.yml
 
-```shell
+```bash
 deploy:
   type: git
   repo: https://github.com/CrimsonRomance/CrimsonRomance.github.io   #等于你上传的github仓库的地址
@@ -172,7 +172,7 @@ deploy:
 >
 > 再输入**hexo g，**然后再**hexo d**，就可以将我们public里面的代码上传咯，在GitHub上可以看到我们上传的代码。这样别人也可以通过域名访问我们博客了。在地址栏输入http://域名就可以访问。
 
-```shell
+```bash
 npm install hexo-deployer-git --save
 hexo g   #  生成
 hexo d   #  部署  只有你上一步配置了才能成功的上传github
@@ -202,7 +202,7 @@ hexo d   #  部署  只有你上一步配置了才能成功的上传github
 
 首先你需要把你本地的hexo上传到远程github分值 
 
-```shell
+```bash
 git branch hexo # 创建分支
 git checkout hexo # 切换分支
 git add . # 提交全部

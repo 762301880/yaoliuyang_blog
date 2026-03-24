@@ -12,13 +12,13 @@
 
 - 使用composer安装
 
-```shell
+```bash
 composer require spatie/laravel-backup
 ```
 
 - 注册服务提供者（config/app.php）：
 
-```shell
+```bash
 'providers' => [
     // ...
     Spatie\Backup\BackupServiceProvider::class,
@@ -27,7 +27,7 @@ composer require spatie/laravel-backup
 
 - 发布配置文件
 
-```shell
+```bash
 php artisan vendor:publish --provider="Spatie\Backup\BackupServiceProvider"
 ```
 

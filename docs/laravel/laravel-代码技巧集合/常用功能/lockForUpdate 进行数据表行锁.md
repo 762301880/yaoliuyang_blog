@@ -62,7 +62,7 @@ mysql> select * from stu for update;
 
 > 终端**1**提交事物的时候可以看见终端**2**才可以查询到结果
 
-```shell
+```bash
 # sql 终端 1
 mysql> commit;
 Query OK, 0 rows affected (0.00 sec)

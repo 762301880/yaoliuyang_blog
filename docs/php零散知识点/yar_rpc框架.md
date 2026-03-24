@@ -87,7 +87,7 @@ yar.content_type => application/octet-stream => application/octet-stream
 
 ### [下载软件包](https://pecl.php.net/package/yar)
 
-```shell
+```bash
 # 下载软件包
 wget https://pecl.php.net/get/yar-2.3.2.tgz && tar -zxvf yar-2.3.2.tgz && cd yar-2.3.2
 ```
@@ -96,7 +96,7 @@ wget https://pecl.php.net/get/yar-2.3.2.tgz && tar -zxvf yar-2.3.2.tgz && cd yar
 
 ### alpine 安装
 
-```shell
+```bash
 apk add php-devel  # 安装phpize
 # 执行编译
 bash-5.0# phpize7
@@ -234,7 +234,7 @@ yar
 
 ### pecl安装
 
-```shell
+```bash
 pecl install yar
 pecl install msgpack
 ```

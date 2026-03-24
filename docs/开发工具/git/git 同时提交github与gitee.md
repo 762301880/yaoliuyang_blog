@@ -31,7 +31,7 @@
 
 **第一种方式**
 
-```shell
+```bash
 [core]
 	repositoryformatversion = 0
 	filemode = false
@@ -50,7 +50,7 @@
 
 **第二种方式**
 
-```shell
+```bash
 [core]
 	repositoryformatversion = 0
 	filemode = false
@@ -94,7 +94,7 @@ git push mirror
 
 **最后可以用命令查看一下远程同步的仓库**
 
-```shell
+```bash
 git remote -v  # 查看远程仓库别名以及对应的仓库地址
 origin  git@github.com:762301880/项目名称.git (fetch)
 origin  git@github.com:762301880/项目名称.git (push)

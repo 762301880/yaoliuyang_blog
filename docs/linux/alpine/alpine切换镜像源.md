@@ -15,7 +15,7 @@
 
 **使用命令替换示例**
 
-```shell
+```bash
 cd /etc/apk && sed -i "s/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g" repositories   # 直接用sed命令一键替换
 ```
 

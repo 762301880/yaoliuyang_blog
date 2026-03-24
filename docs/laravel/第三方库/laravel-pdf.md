@@ -46,7 +46,7 @@
 
 > 使用`wkhdmltopdf`命令将网址`https://www.baidu.com`也就是百度的首页打印导出到D盘名为`baidu.pdf`
 
-```shell
+```bash
 wkhmltopdf https://www.baidu.com D:\baidu.pdf
 ```
 
@@ -99,7 +99,7 @@ chmod +x /usr/local/bin/wkhtmltopdf-amd64
 
 - 安装（使用composer在项目的根目录中安装）
 
-```shell
+```bash
 https://github.com/barryvdh/laravel-snappy
 ```
 

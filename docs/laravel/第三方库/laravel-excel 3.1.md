@@ -16,7 +16,7 @@
 
 ## composer[安装](https://docs.laravel-excel.com/3.1/getting-started/installation.html)
 
-```shell
+```bash
 composer require maatwebsite/excel
 ```
 
@@ -25,7 +25,7 @@ composer require maatwebsite/excel
 - laravel<5.6以下需要手动注册
 - 打开config/app.php,以下位置添加ServiceProvider
 
-```shell
+```bash
 'providers' => [
     /*
      * Package Service Providers...
@@ -39,7 +39,7 @@ composer require maatwebsite/excel
 - laravel<5.6以下需要手动注册
 - 打开config/app.php,以下位置添加aliases
 
-```shell
+```bash
 'aliases' => [
     ...
     'Excel' => Maatwebsite\Excel\Facades\Excel::class,
@@ -50,7 +50,7 @@ composer require maatwebsite/excel
 
 - 在根目录下运行以下命令，会在config目录下生成config/excel.php配置文件
 
-```shell
+```bash
 php artisan vendor:publish --provider="Maatwebsite\Excel\ExcelServiceProvider" --tag=config
 ```
 
@@ -61,7 +61,7 @@ php artisan vendor:publish --provider="Maatwebsite\Excel\ExcelServiceProvider" -
 - 使用composer创建
 - 此命令会在`app/Imports`下生成创建的UsersImport导入类
 
-```shell
+```bash
 php artisan make:export UsersExport --model=User   # --model=你需要导出的模型类
 ```
 
@@ -120,7 +120,7 @@ class UserExport implements FromCollection
 - 以上步骤完成之后直接请求接口即可
 - 在postman或者浏览器中请求接口地址即可导出excel表
 
-```shell
+```bash
 http://127.0.0.1:8000/api/excel_export
 ```
 
@@ -198,7 +198,7 @@ class InvoicesExport implements ShouldAutoSize
 
 - `使用composer创建导出类`
 
-```shell
+```bash
 php artisan make:import UsersImport --model=User        # --model=你需要导出的模型类
 php artisan make:import UsersImport                     # 如果不需要可以不指定模型
 ```
@@ -276,7 +276,7 @@ private function ExcelToTime(int $date)
 
 > 类似于下面这种强转为**string**类型,数据库记得类型修改为**varchar**
 
-```shell
+```bash
  foreach ($collection as $row) {
             PullNewGainPrize::create([
                 'date' => $row[0],//用户昵称

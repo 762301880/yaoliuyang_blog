@@ -46,7 +46,7 @@ str_repeat(0, 3);//自动填充0
 
 ## 删除指定的字符
 
-```shell
+```bash
 $value="/v2/order/list.html";
 $newText=str_replace('.html','',$value);
 # 输出
@@ -63,7 +63,7 @@ $newText=str_replace('.html','',$value);
 
 **打印机生成36字节的字符串文档地址**
 
-```shell
+```bash
 http://doc2.10ss.net/332000
 # sdk使用说明
 http://doc2.10ss.net/337744
@@ -73,7 +73,7 @@ http://doc2.10ss.net/337744
 
 **代码示例**
 
-```shell
+```bash
   public function uuid4()
     {
         mt_srand((double)microtime() * 10000);

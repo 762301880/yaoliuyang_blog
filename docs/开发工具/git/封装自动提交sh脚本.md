@@ -2,7 +2,7 @@
 
 > git_auto_push.sh
 
-```shell
+```bash
 #!/bin/bash
 
 # 定义颜色代码
@@ -86,7 +86,7 @@ echo -e "${GREEN}===========================================================${RE
 
 ## 废弃版
 
-```shell
+```bash
 #
 #COMMIT_MESSAGE=""
 #if [ -z "$1" ]; then
@@ -118,7 +118,7 @@ echo -e "${GREEN}===========================================================${RE
 >
 > 必须把本地密钥**.ssh\id_rsa.pub** 提交到远程服务器的**/root/.ssh/authorized_keys** 并开启 私钥登录 才可以本地无密码执行  [参考](https://gitee.com/yao_liu_yang/phpStudyDoc/blob/main/linux/centOs/linux%E5%88%9B%E5%BB%BA%E6%96%B0%E7%94%A8%E6%88%B7%E5%B9%B6%E9%87%87%E7%94%A8ssh%E5%AF%86%E5%8C%99%E7%99%BB%E5%BD%95.md)
 
-```sh
+```bash
 #remote_git_pull.sh
 
 #!/bin/bash

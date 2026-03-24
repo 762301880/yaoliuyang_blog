@@ -6,7 +6,7 @@
 
 # 代码示例
 
-```shell
+```bash
  # 使用buildSql()函数构建sql语句
  return Stu::where('id',2)->buildSql();
 ```

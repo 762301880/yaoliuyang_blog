@@ -12,7 +12,7 @@
 
 ### **安装jdk**
 
-```shell
+```bash
 # 下载jdk
 wget https://repo.huaweicloud.com/java/jdk/8u151-b12/jdk-8u151-linux-x64.tar.gz
 # 移动并解压
@@ -31,7 +31,7 @@ vim /etc/profile
 
 > 环境变量修改后执行source命令，使得配置生效
 
-```shell
+```bash
 source /etc/profile
 ```
 
@@ -41,7 +41,7 @@ source /etc/profile
 >
 > [推荐下载_2020.3](https://www.jetbrains.com.cn/phpstorm/download/other.html)   因为只有这个版本以下网络提供破解支持
 
-```shell
+```bash
 # 例如我的目录
 yaoliuyang@yaoliuyang-PC:~/Documents/myapp/PhpStorm-2020.3.3/PhpStorm-203.7717.64/bin$ ls
 format.sh  fsnotifier  fsnotifier64  idea.properties  inspect.sh  libdbm64.so  log.xml  ltedit.sh  phpstorm64.vmoptions  phpstorm.png  phpstorm.sh  phpstorm.svg  phpstorm.vmoptions  printenv.py  restart.py
@@ -56,7 +56,7 @@ format.sh  fsnotifier  fsnotifier64  idea.properties  inspect.sh  libdbm64.so  l
 >
 > &          仔细看最后面单独设置了一个& 表示后台启动不占用当前终端
 
-```shell
+```bash
 yaoliuyang@yaoliuyang-PC:~$ vim .bashrc         # 用户家目录下编辑别名
 # 设置命令
 alias phpstorm='sh /home/yaoliuyang/Documents/myapp/PhpStorm-2020.3.3/PhpStorm-203.7717.64/bin/phpstorm.sh >> /dev/null 2>&1 &'
@@ -67,7 +67,7 @@ source ~/.bashrc
 
 **启动phpstorm**
 
-```shell
+```bash
 # 直接终端输入命令phpstorm即可
 yaoliuyang@yaoliuyang-PC:~$ phpstorm
 [1] 21823
@@ -91,7 +91,7 @@ yaoliuyang@yaoliuyang-PC:~$ phpstorm
 >
 > **Icon** 指向图标地址
 
-```shell
+```bash
 # phpstorm.desktop
 [Desktop Entry]
 Type=Application

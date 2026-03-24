@@ -86,7 +86,7 @@ MySQL是一种流行的关系型数据库管理系统，可以使用以下命令
 
 **示例**
 
-```shell
+```bash
 # 创建用户
 CREATE USER 'yao_test_backup'@'%' IDENTIFIED BY 'yao123456';
 # 分配所有权限

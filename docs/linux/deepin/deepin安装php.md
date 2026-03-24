@@ -1,6 +1,6 @@
 ​	
 
-```shell
+```bash
 sudo apt update --fix-missing # 更新镜像源
 sudo apt -y install php7.4-fpm # 不推荐因为deepin 默认最高php版本是7.3
 sudo apt install php #推荐

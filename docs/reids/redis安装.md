@@ -18,7 +18,7 @@
 
 **下载官网提供的稳定版本**
 
-```shell
+```bash
 # 从源代码 下载、解压和编译Redis： 推荐将redis放在 /usr/local目录下编译
 cd /usr/local
 wget https://download.redis.io/releases/redis-6.2.6.tar.gz 
@@ -50,7 +50,7 @@ redis> get foo
 
 > 启动 **/etc/init.d/redis start**
 
-```shell
+```bash
 cd /usr/local/redis-6.2.6/utils     # 进入编译后的utils文件
 sudo cp redis_init_script /etc/init.d/redis         # 拷贝文件
 sudo vim /etc/init.d/redis      # 记得这个要切换root用户编辑
@@ -78,7 +78,7 @@ sudo update-rc.d redis defaults # 加载到系统自启动文件
 
 > 更多配置：https://www.runoob.com/redis/redis-conf.html
 
-```shell
+```bash
 # redis.conf配置 
 /usr/local/redis-6.2.6/redis.conf
 
@@ -96,7 +96,7 @@ bind 127.0.0.1   # 绑定的主机地址	bind指定网段远程访问redis，注
 
 **redis设置后台启动**
 
-```shell
+```bash
 # 将 redis.conf 下的 daemonize 改为yes
 
 cat redis.conf | grep daemonize # 查询是否修改
@@ -113,7 +113,7 @@ netstat -anp |grep 6379
 
 > 因为redis rdb 备份恢复目录默认是/data 所以我们这里映射一下
 
-```sh
+```bash
 docker run -itd --name redis -p 6389:6379 -v /data/redis:/data redis:6.0.9
 ```
 
@@ -152,7 +152,7 @@ docker run -itd --name redis -p 6389:6379 -v /data/redis:/data redis:6.0.9
 
 > 在**.env**中配置 端口还有密码
 
-```shell
+```bash
 REDIS_HOST=redis-13822.c258.us-east-1-4.ec2.cloud.redislabs.com
 REDIS_PASSWORD='********' # 自定义的密码
 REDIS_PORT=13822
@@ -164,7 +164,7 @@ REDIS_PORT=13822
 >
 > 可以用ping 命令测试出ip地址然后讲上一步的域名替换为ip地址连接
 
-```shell
+```bash
 [root@VM-16-5-centos plugins]# ping redis-13822.c258.us-east-1-4.ec2.cloud.redislabs.com
 PING redis-13822.c258.us-east-1-4.ec2.cloud.redislabs.com (3.81.36.161) 56(84) bytes of data.
 

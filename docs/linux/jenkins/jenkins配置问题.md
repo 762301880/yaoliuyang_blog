@@ -38,13 +38,13 @@ https://cloud.tencent.com/developer/article/1605104
 
 > 直接右键复制链接 然后使用**wget** 命令下载到服务器
 
-```shell
+```bash
 wget https://mirrors.tuna.tsinghua.edu.cn/jenkins/war/2.338/jenkins.war
 ```
 
 **将下载的war包放到容器中**
 
-```shell
+```bash
 [root@VM-16-5-centos ~]# ls
 jenkins.war
 
@@ -86,7 +86,7 @@ exit
 
 > 地址+restart  
 
-```shell
+```bash
 # 例子
 http://81.69.231.252:8080/restart
 ```
@@ -95,7 +95,7 @@ http://81.69.231.252:8080/restart
 
 > 初始用户admin是没有密码的，可以用初始界面的密码进行登录,然后再设置中修改密码
 
-```shell
+```bash
 # 查看初始密码
 docker exec -it jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 ```

@@ -74,7 +74,7 @@ php think build 你的模块名
 
 - 使用composer 安装
 
-```shell
+```bash
 composer  require topthink/think-view
 ```
 
@@ -84,7 +84,7 @@ composer  require topthink/think-view
 
 需要在单个模块下建立***route\app.php***文件
 
-```shell
+```bash
 <?php
 use think\facade\Route;
 
@@ -150,7 +150,7 @@ Route::get('test','你的控制器名/你需要访问的方法名');
 >
 > 那是因为thinkphp默认暴露**index.php**你需要隐藏[参考资料](https://www.cnblogs.com/yaoliuyang/p/12410193.html)。或者直接**你的域名/index.php/demo/index控制器/index方法**访问
 >
-> ```shell
+> ```bash
 > # 在public/.htaccess中配置添加
 > <IfModule mod_rewrite.c>
 > Options +FollowSymlinks -Multiviews
@@ -200,7 +200,7 @@ class Demo extends BaseController
 
 **路由指向控制器**
 
-```shell
+```bash
 <?php
 
 use think\facade\Route;
@@ -226,7 +226,7 @@ http://www.thinkphp.com/demo/demo_test
 
 **解决方案**
 
-```shell
+```bash
 
 # 你的项目\public\.htaccess
 

@@ -87,7 +87,7 @@ if($hours >= 12 && $Datetime =< 18) return "下午";
 
 **参考的代码示例**
 
-```shell
+```bash
 <?php
 //计算两个日期相差几个月多余几天
 function getMonthAndDay($date1, $date2)

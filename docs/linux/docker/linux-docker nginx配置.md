@@ -16,7 +16,7 @@
 >
 > 在**/usr/share/nginx/html**目录下建立index.php用于测试访问即可
 
-```shell
+```bash
 server {
     listen 80;
     server_name 81.69.231.252;
@@ -55,14 +55,14 @@ server {
 
 **补充**
 
-```shell
+```bash
 # 如果玩laravel 项目的时候提示缺少phpinfo扩展
 composer update --ignore-platform-req=ext-fileinfo
 ```
 
 **推荐直接使用第三方的docker镜像例如hyperf的开发镜像**
 
-```shell
+```bash
 # 启动并下载镜像
 docker run -v /data/work/laravel_study/:/data/work/laravel_study  -p 1997:80 -itd --entrypoint /bin/sh hyperf/hyperf:7.4-alpine-v3.11-swoole
 # 进入容器之后修改镜像源 https://developer.aliyun.com/mirror/alpine?spm=a2c6h.13651102.0.0.3e221b11a7F6xt

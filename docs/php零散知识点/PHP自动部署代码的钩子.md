@@ -74,7 +74,7 @@ git reset --hard origin/master
 
 给post-receive文件添加可执行权限，例如：
 
-```shell
+```bash
 chmod +x post-receive
 ```
 
@@ -90,7 +90,7 @@ chmod +x post-receive
 
 #### **linux 安装**
 
-```shell
+```bash
 sudo apt-get install php-ssh2
 
 # 或者
@@ -104,7 +104,7 @@ sudo apt-get install php-ssh2
 
 然后，在php.ini文件中添加以下行：
 
-```shell
+```bash
 extension=ssh2.so
 ```
 
@@ -139,7 +139,7 @@ use PHPSSH2\PHPSSH2;
 >
 > 1. **配置php.ini文件**：打开您的`php.ini`文件，通常位于PHP安装目录下，添加以下行：
 
-```shell
+```bash
 extension=php_ssh.dll
 ```
 
@@ -162,7 +162,7 @@ extension=php_ssh.dll
 > >
 > > 解决这个问题的方法有几种，下面是两种常用的方法：
 >
-> ```shell
+> ```bash
 >         $server = '';//your_server_ip
 >         $port = 22;//you_server_port
 >         $username = ''; //your_username
@@ -200,7 +200,7 @@ extension=php_ssh.dll
 >
 > 可以将多个命令连接在一起，使用分号 `;` 分隔。这样这些命令会被当做一个整体来执行，确保它们在同一个 shell 中执行。这里是一个示例：
 
-```shell
+```bash
         $server = '';//your_server_ip
         $port = 22;//you_server_port
         $username = ''; //your_username
@@ -265,7 +265,7 @@ ssh2_disconnect($connection);
 
 另一种方法是使用 `ssh2_shell` 函数，在一个 shell 中交互式地执行多个命令。这样可以更加灵活地控制命令的执行，但相应地需要更多的代码。这里是一个示例：
 
-```shell
+```bash
 <?php
 
 $server = '';
@@ -362,7 +362,7 @@ curl http://yourdomain.com/deploy.php?secret=your_secret_key
 
 记得给这个文件执行权限：
 
-```sh
+```bash
 chmod +x post-receive
 ```
 
@@ -381,7 +381,7 @@ RewriteRule ^deploy.php$ /path/to/deploy.php [L]
 
 对于 Nginx，你可以在配置文件中添加类似下面的配置：
 
-```nginx
+```bash
 location /deploy.php {
     alias /path/to/deploy.php;
     # 其他配置...

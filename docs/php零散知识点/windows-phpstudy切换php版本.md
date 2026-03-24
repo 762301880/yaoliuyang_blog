@@ -58,7 +58,7 @@
 
 > 拷贝解压目录下的**php.ini-development** 为**php.ini**
 
-```shell
+```bash
 # 拷贝文件
 cp php.ini-development php.ini
 

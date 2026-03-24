@@ -7,7 +7,7 @@
 >
 > 参考解决方案的博客:	
 
-```shell
+```bash
 # 在文件的server.php中添加 package_max_length
 config\autoload\server.php
 # package_max_length t

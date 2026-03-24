@@ -6,7 +6,7 @@
 
 > 这是一个 MySQL 提供的官方工具，用于在初始安装时对 MySQL 进行一些基本的安全设置，其中包括重置 root 用户的密码。
 
-```shell
+```bash
 sudo mysql_secure_installation
 ```
 
@@ -14,7 +14,7 @@ sudo mysql_secure_installation
 
 > 这种方法需要你停止 MySQL 服务器，然后重新启动，并且在启动时使用 `--skip-grant-tables` 参数。
 
-```shell
+```bash
 sudo service mysql stop  # 停止 MySQL 服务：
 sudo mysqld_safe --skip-grant-tables &           # 以跳过权限检查的方式启动 MySQL：
 ```
@@ -49,6 +49,6 @@ exit;
 
 **重新启动 MySQL**：
 
-```shell
+```bash
 sudo systemctl  start mysql
 ```

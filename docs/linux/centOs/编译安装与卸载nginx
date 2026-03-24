@@ -17,7 +17,7 @@
 
 **安装之前必须要安装的编译工具**
 
-```shell
+```bash
 gcc
 g++
 make
@@ -31,13 +31,13 @@ make
 >
 > 直接右键复制链接 使用**wget命令下载**，或者下载到本地然后使用**ftp**上传到服务器
 
-```shell
+```bash
 wget http://nginx.org/download/nginx-1.21.4.tar.gz
 ```
 
 **下载完成之后解压nginx** &删除下载nginx的压缩包&进入解压目录
 
-```shell
+```bash
 tar -zxvf nginx-1.21.4.tar.gz && rm -rf nginx-1.21.4.tar.gz && cd nginx-1.21.4 
 ```
 
@@ -49,7 +49,7 @@ tar -zxvf nginx-1.21.4.tar.gz && rm -rf nginx-1.21.4.tar.gz && cd nginx-1.21.4
 >
 > 以下命令执行之后会在项目中生成Makefile的文件
 
-```shell
+```bash
 # --prfix 指定程序安装路径
 # --with   指定需要引用哪些模块  --with-pcre 不带路径系统自己查询，--with-zlib=/usr/local/lib/ 指定路径
 ./configure  --prefix=/usr/local/nginx  --with-pcre --with-zlib=/usr/local/lib/ 
@@ -65,14 +65,14 @@ make && sudo make install
 >option, or install the PCRE library into the system, or build the PCRE library
 >statically from the source with nginx by using --with-pcre=<path> option.
 
-```shell
+```bash
 # 安装开发版本
 yum -y install pcre-devel
 ```
 
 **编译安装pcre**
 
-```shell
+```bash
 # 下载地址 https://sourceforge.net/projects/pcre/files/pcre/8.45/     wget 下载的文件叫download
 wget https://sourceforge.net/projects/pcre/files/pcre/8.45/pcre-8.45.tar.gz/download
 tar -zxvf download && rm -rf download &&cd pcre-8.45/
@@ -91,7 +91,7 @@ pcre-config --version
 > option, or install the zlib library into the system, or build the zlib library
 > statically from the source with nginx by using --with-zlib=<path> option.
 
-```shell
+```bash
 yum -y install zlib-devel
 ```
 
@@ -101,7 +101,7 @@ yum -y install zlib-devel
 
 <img src="https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/x58HBYLRFbqlC9K.png" alt="1637131018(1).jpg" style="zoom:33%;" />
 
-```shell
+```bash
 wget http://www.zlib.net/zlib-1.2.11.tar.gz 
 tar -zxvf zlib-1.2.11.tar.gz
 rm -rf zlib-1.2.11.tar.gz cd zlib-1.2.11
@@ -123,7 +123,7 @@ make && make install
 >
 > 如果是进入sbin目录直接执行 ./ nginx +参数命令
 
-```shell
+```bash
 [root@VM-56-0-centos ~]# /usr/local/nginx/sbin/nginx
 [root@VM-56-0-centos ~]# 
 # 重启nginx
@@ -132,7 +132,7 @@ make && make install
 [root@VM-56-0-centos ~]# /usr/local/nginx/sbin/nginx -s stop
 ```
 
-```shell
+```bash
 [root@VM-56-0-centos ~]# nginx
 -bash: nginx: command not found
 
@@ -150,7 +150,7 @@ ln -s /usr/local/nginx/sbin/nginx /usr/bin/nginx
 
 **查看nginx是否启动成功**
 
-```shell
+```bash
 yaoliuyang@yaoliuyang-PC:/etc/nginx/sites-enabled$ ps -ef | wgrep nginx
 root      4885     1  0 13:38 ?        00:00:00 nginx: master process /usr/sbin/nginx -g daemon on; master_process on;
 www-data  4886  4885  0 13:38 ?        00:00:00 nginx: worker process
@@ -169,7 +169,7 @@ root      183056   90667  0 06:55 pts/1    00:00:00 grep --color=auto nginx
 
 > nginx编译安装的配置目录在 **/usr/local/nginx/conf/nginx.conf**中
 
-```shell
+```bash
 mkdir /usr/local/nginx/conf.d
 vi /usr/local/nginx/conf/nginx.conf
 # 再下面加入一行 第一个是 www.cs.com.conf  第二个是 www.cs.com 任意取一个配置即可自己喜欢就好
@@ -206,7 +206,7 @@ curl www.cs.com
 
 > 注意：卸载一个编译安装软件的时候必须先停止
 
-```shell
+```bash
 rm -rf /usr/local/nginx      # 直接删除软件的安装目录即可
 ```
 

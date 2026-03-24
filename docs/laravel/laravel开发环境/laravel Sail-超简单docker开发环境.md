@@ -10,7 +10,7 @@
 >
 > 此项目会保存在本机目录
 
-```shell
+```bash
 curl -s "https://laravel.build/项目名称" | bash
 
 # 例子

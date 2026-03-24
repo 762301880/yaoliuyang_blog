@@ -37,7 +37,7 @@ class Printer extends Facade
 
 ## 使用
 
-```shell
+```bash
 use app\admin\Facades\Printer;
 Printer::指定工具类下面的方法();
 ```

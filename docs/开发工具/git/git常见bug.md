@@ -33,7 +33,7 @@
 
 > 关闭 NTFS 保护机制的配置，操作命令如下：
 
-```shell
+```bash
 git config core.protectNTFS false
 ```
 

@@ -233,7 +233,7 @@ public function getStatusTextAttr($value,$data)
 
 > **说明** 这里有一个**坑**就是<font color='red'>如果需要调用别的变量中的方法需要筛选字段的时候带入别的变量</font>
 
-```shell
+```bash
 
 # 代码调用
    public function queryOrderNumber($order_number)
@@ -334,7 +334,7 @@ User::useGlobalScope(true)->select();
 
 **代码示例**
 
-```shell
+```bash
   $data=[['aunt_id'=>123,'service_id'=>456],['aunt_id'=>123,'service_id'=>456]];
   $auntServiceModel= new  AuntServiceModel();
   dd($auntServiceModel->saveAll($data));
@@ -366,7 +366,7 @@ User::useGlobalScope(true)->select();
 
 ### **实战代码**
 
-```shell
+```bash
 public function getOrderReserveListOrDetails($data)
     {
         $id = $data['id'] ?? "";
@@ -599,7 +599,7 @@ https://blog.csdn.net/grey_bear/article/details/122584902      json字段提取
 
 [![xVh86s.png](https://s1.ax1x.com/2022/09/26/xVh86s.png)
 
-```shell
+```bash
 	 getLastSql();
      //https://www.kancloud.cn/manual/thinkphp5_1/507621
      $stu = Stu::where('info->sex', 2)->select();
@@ -610,7 +610,7 @@ https://blog.csdn.net/grey_bear/article/details/122584902      json字段提取
 
 > 需要指定设置对应json数据类型
 
-```shell
+```bash
 // 设置json类型字段
     protected $json = ['info'];
 

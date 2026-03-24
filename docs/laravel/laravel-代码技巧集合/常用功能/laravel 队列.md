@@ -132,7 +132,7 @@ php artisan queue:work
 
 > Supervisor 是一个用于 Linux 操作系统的进程监视器，如果 `queue:work` 进程失败，它将自动重启该进程。要在 Ubuntu 上安装 Supervisor，你可以使用以下命令：
 
-```shell
+```bash
 sudo apt-get install supervisor
 ```
 
@@ -140,7 +140,7 @@ sudo apt-get install supervisor
 
 >Supervisor 配置文件通常存储在 /etc/supervisor/conf.d 目录。在此目录中，你可以创建任意数量的配置文件，这些配置文件将指示 supervisor 如何监视你的进程。例如，让我们创建一个 laravel-worker.conf 文件，启动并监视 queue:work 进程：
 
-```shell
+```bash
 [program:laravel-worker]
 process_name=%(program_name)s_%(process_num)02d
 command=php /home/forge/app.com/artisan queue:work sqs --sleep=3 --tries=3
@@ -161,7 +161,7 @@ stopwaitsecs=3600
 
 >创建了配置文件后，你可以使用以下命令更新 Supervisor 配置并启动进程：
 
-```shell
+```bash
 sudo supervisorctl reread
 
 sudo supervisorctl update

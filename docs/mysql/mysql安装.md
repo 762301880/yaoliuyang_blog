@@ -12,7 +12,7 @@
 
 [docker-mysql官网](https://registry.hub.docker.com/_/mysql)
 
-```shell
+```bash
 # 下载 默认下载得是最新版 8.*的mysql 这里指定mysql版本
 docker pull mysql:5.7
 # 启动 -e(设置环境变量) MYSQL_ROOT_PASSWORD=指定密码  不推荐使用-v h
@@ -56,7 +56,7 @@ docker run --name mysql -itd -p 3307:3306 -v /data/mysql:/var/lib/mysql -e MYSQL
 
 > 在解压目录创建my.ini文件并添加内容如下
 
-```shell
+```bash
 [mysqld]
 # 设置3306端口
 port=3306
@@ -96,7 +96,7 @@ default-character-set=UTF8MB4
 
 > <font color='red'>使用管理员权限进入DOS</font>，在cmd中，进入解压目录下的bin目录依次执行以下命令：
 
-```shell
+```bash
 # 对mysql进行初始化，请注意，这里会生产一个临时密码，后边要使用这个临时密码(注意这个临时密码不要弄丢了下面要用到)
   mysqld --initialize --user=mysql --console
   
@@ -120,7 +120,7 @@ create user 'root'@'%' IDENTIFIED WITH mysql_native_password BY '123456';
 
 **示例**
 
-```shell
+```bash
 # 对mysql进行初始化，请注意，这里会生产一个临时密码，后边要使用这个临时密码(注意这个临时密码不要弄丢了下面要用到)
 C:\Windows\system32>  mysqld --initialize --user=mysql --console
 2023-02-28T03:31:46.255706Z 0 [System] [MY-013169] [Server] D:\Program Files\mysql-8.0.32-winx64\bin\mysqld.exe (mysqld 8.0.32) initializing of server in progress as process 15936
@@ -223,7 +223,7 @@ Query OK, 0 rows affected (0.02 sec)
 
 > 需要在my.cnf 加上这个用户认证方式，再来创建用户
 
-```shell
+```bash
 [mysqld]
 default_authentication_plugin=mysql_native_password
 ```
@@ -266,7 +266,7 @@ FLUSH PRIVILEGES; #刷新
 
 > https://www.jb51.net/database/294905uw3.htm
 
-```shell
+```bash
 # 修改本地链接为所有地址都可以链接 
 # 显示数据库
 mysql> show databases;
@@ -333,7 +333,7 @@ Query OK, 0 rows affected (0.00 sec)
 
 **Docker 安装**
 
-```shell
+```bash
 docker pull chat2db/chat2db:latest
 // 前台运行,运行后不能关闭命令行
 docker run -ti --name=chat2db -p 10824:10824 chat2db/chat2db:latest

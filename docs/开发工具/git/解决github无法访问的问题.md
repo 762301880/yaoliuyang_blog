@@ -27,7 +27,7 @@
 >
 > 在里面手动添加ip地址即可
 
-```shell
+```bash
 # 手动添加的github dns
 13.114.40.48   www.github.com	
 ```
@@ -38,7 +38,7 @@
 
 **测试使用 linux服务器  ping github.com 可以ping通过**
 
-```shell
+```bash
 root@hcss-ecs-739f:~# ping github.com
 PING github.com (20.205.243.166) 56(84) bytes of data.
 64 bytes from 20.205.243.166 (20.205.243.166): icmp_seq=1 ttl=109 time=83.9 ms

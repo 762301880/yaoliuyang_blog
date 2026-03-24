@@ -4,7 +4,7 @@
 >
 > 先转化为unix时间戳然后加上需要什么时候查看的时间直接<=当前日期即可
 
-```shell
+```bash
         $gainPrizeList = $this->gainPrizeList($request)
             ->when(!empty($request->input('date')) && $request->input('type') == PullNewGainPrizeModel::TYPE_FALSE, function ($query) {
                 // 第一天导入的第二天 0:30 才显示
@@ -28,7 +28,7 @@
 
 **代码示例**
 
-```shell
+```bash
 # 模型中添加访问器
     protected $appends = ['sex_serialize_int']; # 将访问器添加的字段添加到查询的模型中
 
@@ -44,7 +44,7 @@
 
 **返回结果**
 
-```shell
+```bash
 array:10 [▼
   0 => array:7 [▼
     "id" => 1

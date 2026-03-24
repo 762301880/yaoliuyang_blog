@@ -135,7 +135,7 @@ class LocationController extends Controller
 
 - 结果展示
 
-```shell
+```bash
 array:3 [▼
   "status" => 0
   "message" => "query ok"

@@ -24,7 +24,7 @@
 
 [linux版本](https://yaoliuyang.lanzoul.com/ifHES0du0uod)
 
-```shell
+```bash
 wget https://download.typora.io/linux/typora_1.4.1-dev_amd64.deb
 ```
 

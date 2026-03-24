@@ -82,7 +82,7 @@
 
 > 直接指定连接配置即可 connection里面不指定配置则默认**default**配置
 
-```shell
+```bash
  $redis = Redis::connection('laravel_statistical')->client();
  $redis->get('name');
 ```

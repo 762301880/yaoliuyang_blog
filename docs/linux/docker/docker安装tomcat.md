@@ -9,7 +9,7 @@
 
 # 安装
 
-```shell
+```bash
  # 官方的使用
  docker run -it --rm tomcat:9.0
  # 我们之前的启动都是后台，停止了容器之后，容器还是可以查到
@@ -31,7 +31,7 @@
 
 - 以下操作即可
 
-```shell
+```bash
 root@e5f7f01a6d44:/usr/local/tomcat# cd /usr/local/tomcat/  
 root@e5f7f01a6d44:/usr/local/tomcat# cp webapps.dist/* webapps
 cp: -r not specified; omitting directory 'webapps.dist/ROOT'

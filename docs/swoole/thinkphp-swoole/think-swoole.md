@@ -8,7 +8,7 @@
 
 ## 安装
 
-```shell
+```bash
 composer require topthink/think-swoole=2.0.*
 ```
 

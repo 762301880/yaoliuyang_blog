@@ -8,13 +8,13 @@
 
 ## **1. <font color='red'>如果您使用的是 64 位系统，请开启 32 bit 架构支持（如果您之前没有开启的话）：</font>**
 
-```shell
+```bash
 sudo dpkg --add-architecture i386 
 ```
 
 ## 2.下载添加仓库密钥：
 
-```shell
+```bash
 sudo wget -nc -O /usr/share/keyrings/winehq-archive.key https://dl.winehq.org/wine-builds/winehq.key
 ```
 
@@ -28,7 +28,7 @@ sudo wget -nc -O /usr/share/keyrings/winehq-archive.key https://dl.winehq.org/wi
 
 **更新安装包**
 
-```shell
+```bash
 sudo apt update
 ```
 
@@ -43,7 +43,7 @@ sudo apt update
 
 ## apt 直接安装
 
-```shell
+```bash
 # 搜索 wine64
 sudo apt search wine
 # 安装
@@ -54,7 +54,7 @@ sudo apt install wine64-tools
 
 # 使用
 
-```shell
+```bash
 # 安装exe软件
 wine  [exe软件路径]
 ```

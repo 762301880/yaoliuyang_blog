@@ -13,13 +13,13 @@
 
 > 自己封装的**php** 镜像 内置***swoole***        `docker pull yaoliuyang/php:7.4-fpm`
 
-```shell
+```bash
 docker pull php:7.4-fpm
 ```
 
 ## 1.2 启动php容器
 
-```shell
+```bash
 docker run -itd  -p 80:80 --name php  容器id
 ```
 
@@ -27,7 +27,7 @@ docker run -itd  -p 80:80 --name php  容器id
 
 - 查看正在运行中的容器
 
-```shell
+```bash
 docker ps -a
 # 显示如下
 CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS          PORTS                               NAMES
@@ -36,13 +36,13 @@ CONTAINER ID   IMAGE       COMMAND                  CREATED          STATUS     
 
 - 进入容器内部
 
-```shell
+```bash
 docker exec -it 容器id /bin/bash
 ```
 
 - 配置php.ini
 
-```shell
+```bash
 # 1. 进入容器内部之后查询配置文件的地址
 root@9afd02d24578:/usr/local/etc/php# find / -name php
 /usr/local/etc/php # 可以看出这个就是配置文件地址的目录
@@ -64,19 +64,19 @@ exit
 
 ## 2.1 拉去php镜像
 
-```shell
+```bash
 docker pull nginx 
 ```
 
 - 查看拉取的镜像
 
-```shell
+```bash
 docker images
 ```
 
 ## 2.2  启动镜像
 
-```shell
+```bash
 # linux
 docker run -itd  --name mynginx  -p 8080:80  -v /etc/nginx:/www  容器id
 # windows 
@@ -87,13 +87,13 @@ docker run -itd  --name mynginx  -p 8080:80  -v c:/etc/nginx:/www  容器id
 
 - nginx的配置目录
 
-```shell
+```bash
 /etc/nginx
 ```
 
 - nginx 多主机配置目录
 
-```shell
+```bash
 /etc/nginx/conf.d/
 # 在这里配置的默认启动文件位置需要重启nginx 才能使配置生效
 nginx -s reload
@@ -109,7 +109,7 @@ service nginx reload
 
 ### 2.4.1 启动nginx
 
-```shell
+```bash
 docker pull nginx # 下载nginx
 # 启动nginx
 # 第一个是挂载是挂载配置文件  第二个挂载是挂载项目存放目录
@@ -120,7 +120,7 @@ docker pull nginx # 下载nginx
 
 > 注意 -v C:\etc\www:/www  此映射目录必须与上一步 nginx的映射目录一致
 
-```shell
+```bash
 # 下载php
 docker pull php:7.4-fpm
 # 启动php -v 将本地项目目录挂载到容器 内部的www目录
@@ -129,7 +129,7 @@ docker run --name  myphp -v  C:\etc\www:/www  -itd  容器id
 
 ### 2.4.5 最后的配置
 
-```shell
+```bash
 # 在本地修改nginx配置文件
 cp default.conf default.conf.cp # 备份一份配置文件 
 vim default.conf #编辑默认的配置文件
@@ -179,7 +179,7 @@ snginx reload
 
 - laravel 配置,[参考资料](https://learnku.com/articles/49827)
 
-```shell
+```bash
 server {
   listen       80;
   server_name  localhost;
@@ -213,13 +213,13 @@ server {
 
 ## 拉取镜像 
 
-```shell
+```bash
 docker pull mysql:5.7
 ```
 
 ## 启动mysql实例
 
-```shell
+```bash
 #--name 为mysql的实例设置别名。 -p 3307为对外暴露的端口。3306是内部端口 
 #-e MYSQL_ROOT_PASSWORD 设置mysql登录密码  -d 以守护进程运行（后台运行） 最后的mysql是镜像名称
 #-v 数据卷挂载

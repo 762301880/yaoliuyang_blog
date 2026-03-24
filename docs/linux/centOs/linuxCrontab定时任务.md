@@ -13,7 +13,7 @@
 
 ## 2.1 基本命令
 
-```shell
+```bash
 crontab [-u username]　　　　//省略用户表表示操作当前用户的crontab
     -e      (编辑工作表)
     -l      (列出工作表里的命令)
@@ -688,7 +688,7 @@ github 地址：https://github.com/taobao/TBSchedule。
 假设你有一个脚本 bot.py 需要长时间运行：
 前台执行：
 
-```shell
+```bash
   python3 /root/agent301-claimer/bot.py
 ```
 
@@ -697,7 +697,7 @@ github 地址：https://github.com/taobao/TBSchedule。
 
 > 这个命令会立即返回控制权，bot.py 在后台运行。
 
-```shell
+```bash
   python3 /root/agent301-claimer/bot.py &
 ```
 
@@ -706,7 +706,7 @@ github 地址：https://github.com/taobao/TBSchedule。
 
 ##  将定时任务输出到日志
 
-```shell
+```bash
 0 11 * * * python3 ~/agent301-claimer/bot.py >> /var/log/bot.log 2>&1
 ```
 

@@ -10,7 +10,7 @@
 
 > 接口文档地址：https://work.weixin.qq.com/api/doc/90000/90135/90208
 
-```shell
+```bash
     public function departmentList(Request $request)
     {
         $id=$request->input('id');
@@ -40,7 +40,7 @@
 >
 > 这里需要结合上一步的**获取部门列表**接口使用,上一步的部门列表会返回id
 
-```shell
+```bash
     public function simplelist(Request $request)
     {
         $departmentId = $request->input('department_id');//获取的部门id

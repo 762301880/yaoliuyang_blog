@@ -9,7 +9,7 @@
 
 # 二、代码示例 
 
-```shell
+```bash
  use Illuminate\Support\Facades\Redis;
  public function login(){
    $redis = Redis::connection()->client();

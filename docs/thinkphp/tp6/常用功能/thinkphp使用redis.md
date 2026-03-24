@@ -19,7 +19,7 @@
 >
 > 找到**config\cache**中配置添加**redis**
 
-```shell
+```bash
 <?php
 
 // +----------------------------------------------------------------------
@@ -71,7 +71,7 @@ return [
 
 ## 代码实例
 
-```shell
+```bash
         use think\cache\driver\Redis;   
     # 这里的用法需要参考底层  https://github.com/phpredis/phpredis    
     $redis = new Redis([  
@@ -126,7 +126,7 @@ return [
 
 **解决方案**
 
-```shell
+```bash
 # 在别的端加密token的时候手动序列化一下value
 $redis->set('token',serialize('token'));
 

@@ -12,7 +12,7 @@
 
 - 常用命令
 
-```shell
+```bash
 sudo dpkg -i  文件名.deb  #安装.deb文件
 ```
 
@@ -20,7 +20,7 @@ sudo dpkg -i  文件名.deb  #安装.deb文件
 
 - 全部命令
 
-```shell
+```bash
  yaoliuyang@benben:~$ dpkg --help
  用法：dpkg [<选项> ...] <命令>
  命令：

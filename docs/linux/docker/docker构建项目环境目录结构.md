@@ -108,7 +108,7 @@ WORKDIR /var/www/html
 
 ## 📑 Nginx 配置（docker/nginx/default.conf）
 
-```nginx
+```bash
 server {
     listen 80;
     index index.php index.html;

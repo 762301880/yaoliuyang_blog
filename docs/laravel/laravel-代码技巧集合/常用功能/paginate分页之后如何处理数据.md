@@ -12,7 +12,7 @@
 
 # 代码示例
 
-```shell
+```bash
         $status = $request->input('status');
         $orderDelivery = OrderDelivery::where('status', $status)
             ->when($status == OrderDelivery::STATUS_SUCCESS_DISTRIBUTION, function ($query) {
@@ -37,7 +37,7 @@
 
 - response 类处理组装数据
 
-```shell
+```bash
 <?php
 
 

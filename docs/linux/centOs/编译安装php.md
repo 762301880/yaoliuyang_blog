@@ -18,7 +18,7 @@
 
 **安装编译工具及库文件**
 
-```shell
+```bash
 yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel autoconf automake
 ```
 
@@ -26,7 +26,7 @@ yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel autoc
 
 > --no-check-certificate 不校验证书
 
-```shell
+```bash
 wget https://www.php.net/distributions/php-7.4.3.tar.gz --no-check-certificate
 ```
 
@@ -34,7 +34,7 @@ wget https://www.php.net/distributions/php-7.4.3.tar.gz --no-check-certificate
 
 ### 解压 && 进入解压目录
 
-```shell
+```bash
 # 解压&&进入
 tar -zxvf php-7.4.3.tar.gz && cd php-7.4.3/
 ```
@@ -87,7 +87,7 @@ Thank you for using PHP.
 >
 > No package 'libxml-2.0' found
 
-```shell
+```bash
 yum -y install libxml2-devel
 ```
 
@@ -98,7 +98,7 @@ yum -y install libxml2-devel
 >
 > No package 'sqlite3' found
 
-```shell
+```bash
 yum -y install sqlite-devel
 ```
 
@@ -108,20 +108,20 @@ yum -y install sqlite-devel
 >
 > 在./configure 时加–disable-fileinfo
 
-```shell
+```bash
 ./configure --disable-fileinfo --with-php-config=/usr/local/php/bin/php-config 
 ```
 
 ###  make && make install
 
-```shell
+```bash
 # 编译
 [root@VM-64-25-centos php-7.4.3]# make && make install 
 ```
 
 **测试命令**
 
-```shell
+```bash
 # 只有在 /usr/local/php7.4.3/bin 目录下执行命令
 [root@VM-64-25-centos bin]# /usr/local/php7.4.3/bin/php --version
 PHP 7.4.3 (cli) (built: Nov  9 2021 08:24:01) ( NTS )
@@ -131,7 +131,7 @@ Zend Engine v3.4.0, Copyright (c) Zend Technologies
 
 ###  建立全局php命令
 
-```shell
+```bash
 ln -s /usr/local/php7.4.3/bin/php  /usr/bin/php # 然后你就可以在任何地方使用php 命令了(推荐使用)
 
 # 其它方式
@@ -163,7 +163,7 @@ Zend Engine v3.4.0, Copyright (c) Zend Technologies
 
 复制php.ini
 
-```shell
+```bash
 # 查询php.ini位置(后面赋值的php.inib)
 [root@VM-139-48-centos include]# php -r "phpinfo();" | grep 'php.ini'   
 Configuration File (php.ini) Path => /usr/local/php7.4.3/lib
@@ -187,7 +187,7 @@ cp /root/php-7.4.3/php.ini-development /usr/local/php7.4.3/lib/php.ini
 
 > 编译的时候加上**--enable-fpm**
 
-```shell
+```bash
 # 首先启动报错 错误信息说是找不到php-fpm.conf
 [root@101fe8e80378 /]# /usr/local/php7.4.3/sbin/php-fpm 
 [17-Nov-2021 08:10:54] ERROR: failed to open configuration file '/usr/local/php7.4.3/etc/php-fpm.conf': No such file or directory (2)
@@ -222,7 +222,7 @@ tcp        0      0 127.0.0.1:9000          0.0.0.0:*               LISTEN      
 
 **相关nginx配置**
 
-```shell
+```bash
 server {
     listen 80;
     server_name www.cs.com;
@@ -264,7 +264,7 @@ server {
 
 > 十分不推荐啊，这个亲测构建需要二十多分钟，构建出来的镜像有1.29个G,吐血了都
 
-```shell
+```bash
 FROM centos:latest
 # 设置作者信息
 MAINTAINER yaoliuyang<762301880@qq.com>
@@ -300,7 +300,7 @@ RUN yum -y install libxml2-devel \
 
 **构建dockerfile**
 
-```shell
+```bash
 docker build -t myphp:0.1 .
 ```
 
@@ -323,7 +323,7 @@ docker build -t myphp:0.1 .
 
 > 进入到想要的扩展目录
 
-```shell
+```bash
 cd /root/php-7.4.3/ext/openssl
 
 [root@101fe8e80378 openssl]# /usr/local/php7.4.3/bin/phpize
@@ -358,7 +358,7 @@ tcp        0      0 127.0.0.1:9000          0.0.0.0:*               LISTEN      
 
 **1.进入ext/curl目录**
 
-```shell
+```bash
 # 查询phpize位置
 [root@15fb15a92f7c curl]# find / -name phpize
 /usr/local/php7.4.3/bin/phpize
@@ -391,7 +391,7 @@ extension=curl  # 找到这个位置然后取消注释
 
 **2.报错解决**
 
-```shell
+```bash
 # 如果报错 需要安装 yum install libcurl-devel 
 checking for libcurl >= 7.15.5... no
 configure: error: Package requirements (libcurl >= 7.15.5) were not met:
@@ -440,7 +440,7 @@ yum -y install libcurl-devel
 >
 > yum install libpng-devel
 
-```shell
+```bash
 ./configure  --with-php-config=/usr/local/php7.4.3/bin/php-config
 # 提示报错
 Package 'libpng', required by 'virtual:world', not found # 报错提示
@@ -457,14 +457,14 @@ make && make install
 
 **执行命令的时候会报以下错误**
 
-```shell
+```bash
 ErrorException
 imagecreatefromstring(): No JPEG support in this PHP build
 ```
 
 **解决方案**
 
-```shell
+```bash
 [root@15fb15a92f7c gd]# pwd
 /root/php-7.4.3/ext/gd
 # 查看安装帮助 会看到如下一条命令

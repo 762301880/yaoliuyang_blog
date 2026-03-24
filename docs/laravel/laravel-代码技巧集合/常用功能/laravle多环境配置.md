@@ -6,7 +6,7 @@
 
 
 
-```shell
+```bash
 // 项目根目录下，修改文件 bootstrap/app.php 如下：
 $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)

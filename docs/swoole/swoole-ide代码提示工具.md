@@ -11,7 +11,7 @@
 
  ## 2.1使用`composer`在项目中安装
 
-```shell
+```bash
 composer require swoole/ide-helper:@dev
 # 或者你可以安装一个特定的版本，比如:
 composer require swoole/ide-helper:~4.4.7
@@ -19,7 +19,7 @@ composer require swoole/ide-helper:~4.4.7
 
 - 开发环境安装
 
-```shell
+```bash
 composer require --dev swoole/ide-helper:@dev
 # 或者你可以安装一个特定的版本，比如:
 composer require --dev swoole/ide-helper:~4.4.7
@@ -29,7 +29,7 @@ composer require --dev swoole/ide-helper:~4.4.7
 
 ### 2.2.1先将依赖下载到本地
 
-```shell
+```bash
 composer require swoole/ide-helper:~4.4.7
 ```
 

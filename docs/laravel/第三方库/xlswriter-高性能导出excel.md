@@ -48,7 +48,7 @@ composer require viest/php-ext-xlswriter-ide-helper:dev-master
 
 - 编辑源
 
-```shell
+```bash
 vi /etc/apk/repositories
 # 添加官方 Testing 源
 http://nl.alpinelinux.org/alpine/edge/testing
@@ -56,7 +56,7 @@ http://nl.alpinelinux.org/alpine/edge/testing
 
 - 使用 APK 安装
 
-```shell
+```bash
 apk add php7-pecl-xlswriter
 ```
 

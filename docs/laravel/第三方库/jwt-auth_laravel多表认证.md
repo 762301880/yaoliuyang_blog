@@ -137,7 +137,7 @@ JWT_SECRET=mNkE9Rba3lH0LxvaHFu6Mx0H6I37JXP4nLW1KI3vVCjuaIwBOyib3QLgjGCFrufz
 
 > 在该`config/auth.php`文件中，您需要进行一些更改以配置 Laravel 以使用`jwt`防护来支持您的应用程序身份验证。
 
-```shell
+```bash
 'guards' => [
         'web' => [
             'driver' => 'session',
@@ -213,7 +213,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiI...
 
   2 .  以参数的格式传输token
 
-```shell
+```bash
 Query string parameter
 
 http://example.dev/me?token=eyJhbGciOiJIUzI1NiI...
@@ -225,7 +225,7 @@ http://example.dev/me?token=eyJhbGciOiJIUzI1NiI...
 
 >创建登录路由
 
-```shell
+```bash
 # 创建登录路由
 Route::any('login',[\App\Http\Controllers\AuthUserController::class,'login']);
 # 对应控制器代码
@@ -265,7 +265,7 @@ Route::any('login',[\App\Http\Controllers\AuthUserController::class,'login']);
 
 - 获取已经登录的用户
 
-```shell
+```bash
 use Tymon\JWTAuth\Facades\JWTAuth
 # 方法一
  $user=JWTAuth::parseToken()->authenticate()->toArray();
@@ -281,7 +281,7 @@ auth()->user();
 
 - 退出
 
- ```shell
+ ```bash
  JWTAuth::parseToken()->invalidate()
  ```
 
@@ -307,7 +307,7 @@ auth()->user();
 
 > 在该`config/auth.php`文件中，您需要进行一些更改以配置 Laravel 以使用`jwt`防护来支持您的应用程序身份验证。
 
-```shell
+```bash
 'guards' => [
         'web' => [
             'driver' => 'session',
@@ -330,7 +330,7 @@ auth()->user();
 
 **获取或验证用户信息**
 
-```shell
+```bash
 Auth('admin')->attempt($request->all()); # 采用Auth的attempt验证 密码一定要bcrypt()函数加密
 
 auth('admin')->user(); # 获取用户信息
@@ -580,7 +580,7 @@ echo $renewToken;
 
 **中间件实现逻辑**
 
-```shell
+```bash
 <?php
 
 namespace app\http\middleware;

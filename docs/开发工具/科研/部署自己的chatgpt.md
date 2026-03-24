@@ -6,7 +6,7 @@
 
 **docker**部署
 
-```shell
+```bash
 docker pull yidadaa/chatgpt-next-web
 
 docker run -d -p 3000:3000 \

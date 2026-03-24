@@ -16,13 +16,13 @@
 
 ## 安装
 
-```shell
+```bash
 composer require getuilaboratory/getui-pushapi-php-client-v2
 ```
 
 代码示例
 
-```shell
+```bash
     public static function pushToSingleByCid($title, $body, $cid)
     {
         //创建API，APPID等配置参考 环境要求 进行获取

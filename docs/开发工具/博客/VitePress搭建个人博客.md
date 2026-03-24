@@ -10,7 +10,7 @@
 
 在你电脑随便找个地方：
 
-```shell
+```bash
 npm create vitepress@latest
 ```
 
@@ -45,13 +45,13 @@ docs/.vitepress/config.js
 
 #### 安装插件
 
-```shell
+```bash
 npm install vitepress-sidebar -D
 ```
 
 ### 配置config.ts
 
-```shell
+```bash
 import { defineConfig } from 'vitepress'
 import { generateSidebar } from 'vitepress-sidebar'
 
@@ -149,7 +149,7 @@ export default defineConfig({
 
 ## ▶️ 第四步：运行预览
 
-```shell
+```bash
 npm install   # 安装依赖
 npm run dev   # 运行项目 
 ```
@@ -168,7 +168,7 @@ http://localhost:5173
 
 **docker-compose.yml**
 
-```shell
+```bash
 version: '3'
 
 services:

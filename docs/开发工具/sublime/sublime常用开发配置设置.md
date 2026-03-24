@@ -4,7 +4,7 @@
 
 > 左边的**Preferences.sublime-settings** 是设置参考  我们需要在右边设置
 
-```shell
+```bash
 # 添加以下 设置为true，当切换到其他文件时自动保存文件或应用程序
 "save_on_focus_lost": true,
 ```

@@ -2,7 +2,7 @@
 
 ## 1.1  `sudo命令安装composer`
 
-```shell
+```bash
 sudo install composer
 ```
 
@@ -10,7 +10,7 @@ sudo install composer
 
 - 查看镜像源命令
 
-```shell
+```bash
 composer config -g -l repo.packagist
 ```
 
@@ -18,7 +18,7 @@ composer config -g -l repo.packagist
 
 > 切换阿里云镜像
 
-```shell
+```bash
 composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 ```
 

@@ -2,7 +2,7 @@
 
 ## 1.1 登录仓库
 
-```shell
+```bash
 [root@VM-28-119-centos /]# docker login
 # 登录你的Docker ID推拉图像从Docker Hub。如果你没有Docker ID，请到https://hub.docker.com创建一个。
 Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
@@ -13,7 +13,7 @@ Login Succeeded # 登录成功
 
 ## 1.2   查看自己的镜像
 
-```shell
+```bash
 docker images
 # 显示如下
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
@@ -28,7 +28,7 @@ php                 7.4.3               8fcb3668bb27        10 minutes ago      
 
 > 次命令常用于提交自己构建的容器
 
-```shell
+```bash
 docker commit 提交容器成为一个新的副本
 docker commit -m '提交的描述信息' -a '作者信息'  需要提交的容器id  个人仓库名/目标镜像名:tag
 # 例如
@@ -37,7 +37,7 @@ docker commit -m 'include swoole&vim' -a 'yaoliuyang' cd1  yaoliuyang/php:7.4-fp
 
 ## 1.4 将构建的镜像提交到远程dockerhub库
 
-```shell
+```bash
 docker push 需要推送的地址名/镜像名:版本号
 # 使用
 docker push yaoliuyang/php:latest # latest版本号
@@ -65,7 +65,7 @@ docker push yaoliuyang/php:latest # latest版本号
 
 ### 2.2.1  登录阿里云Docker Registry
 
-```shell
+```bash
 $ docker login --username=76230****@qq.com registry.cn-beijing.aliyuncs.com
 ```
 
@@ -75,13 +75,13 @@ $ docker login --username=76230****@qq.com registry.cn-beijing.aliyuncs.com
 
 ### 2.2.2 从Registry中拉取镜像
 
-```shell
+```bash
 $ docker pull registry.cn-beijing.aliyuncs.com/yaoliuyang/php:[镜像版本号]
 ```
 
 ### 2.2.3  将镜像推送到Registry
 
-```shell
+```bash
 $ docker login --username=76230****@qq.com registry.cn-beijing.aliyuncs.com
 $ docker tag [ImageId] registry.cn-beijing.aliyuncs.com/yaoliuyang/php:[镜像版本号]
 $ docker push registry.cn-beijing.aliyuncs.com/yaoliuyang/php:[镜像版本号]
@@ -99,7 +99,7 @@ $ docker push registry.cn-beijing.aliyuncs.com/yaoliuyang/php:[镜像版本号]
 
 使用"docker tag"命令重命名镜像，并将它通过专有网络地址推送至Registry。
 
-```shell
+```bash
 $ docker images
 REPOSITORY                                        TAG                 IMAGE ID        CREATED             SIZE registry.aliyuncs.com/acs/agent                   0.7-dfb6816         37bb9c63c8b2        7 days ago          37.89 MB
 
@@ -108,6 +108,6 @@ $ docker tag 37bb9c63c8b2 registry-vpc.cn-beijing.aliyuncs.com/acs/agent:0.7-dfb
 
 使用 "docker push" 命令将该镜像推送至远程。
 
-```shell
+```bash
 $ docker push registry-vpc.cn-beijing.aliyuncs.com/acs/agent:0.7-dfb6816
 ```

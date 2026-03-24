@@ -31,7 +31,7 @@ git clone https://github.com/walkor/Workerman
 
 - 使用artisan创建命令
 
-```shell
+```bash
 php artisan make:command Workerman
 ```
 
@@ -114,7 +114,7 @@ class Workerman extends Command
 
 ### 2.2.1 使用命令启用
 
-```shell
+```bash
 php artisan workerman:command start  d
 ```
 

@@ -201,7 +201,7 @@ $res = $ossClient->listBuckets()->getBucketList();
 
 **如何给文字水印换行**
 
-```shell
+```bash
 https://blog.csdn.net/qq_36025814/article/details/124158528
 ```
 
@@ -228,7 +228,7 @@ https://blog.csdn.net/qq_36025814/article/details/124158528
 >
 >    组合这些参数，你可以创建一个包含所有所需处理的URL，示例如下：
 
-```shell
+```bash
 https://your-bucket-name.oss-cn-hangzhou.aliyuncs.com/your-image.jpg?x-oss-process=image/resize,w_500/format,jpg
 ```
 

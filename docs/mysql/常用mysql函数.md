@@ -94,7 +94,7 @@ WHERE TABLE_SCHEMA = '数据库名' AND TABLE_NAME = '表名';
 
 **代码示例**
 
-```shell
+```bash
 UPDATE "表名" SET "需要修改的字段名称" = REPLACE ( "需要修改的字段名称", "需要修改的文字(例如:咨询)", "修改后的文字(例如:询问)" ) WHERE cate = "表名"
 ```
 

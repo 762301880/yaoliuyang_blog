@@ -26,7 +26,7 @@
 2. 配置主数据库连接
    在 `.env` 文件中，找到以下配置项并填写主数据库的相关信息：
 
-   ```ini
+   ```bash
    DB_CONNECTION=mysql
    DB_HOST=主数据库主机名
    DB_PORT=3306
@@ -38,7 +38,7 @@
 3. 配置从数据库连接
    继续在 `.env` 文件中添加从数据库的配置项，通常可以添加多个从数据库配置，以实现负载均衡和故障容错。
 
-   ```ini
+   ```bash
    DB_CONNECTION_SECONDARY=mysql
    DB_HOST_SECONDARY=从数据库主机名
    DB_PORT_SECONDARY=3306

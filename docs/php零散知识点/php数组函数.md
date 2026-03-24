@@ -335,7 +335,7 @@ Array
 
 **代码示例**
 
-```shell
+```bash
 <?php
 
 $arr=[['name'=>'张三','age'=>23],['name'=>'李四','age'=>28],['name'=>'小芳','age'=>18]];

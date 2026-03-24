@@ -26,7 +26,7 @@ https://www.yisu.com/zixun/486965.html
 
 **编写shell脚本-seconds.sh**
 
-```shell
+```bash
 #!/bin/bash
 step=1 #间隔的秒数
 

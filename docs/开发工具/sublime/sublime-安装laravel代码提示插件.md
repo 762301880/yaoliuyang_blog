@@ -26,7 +26,7 @@
 
 > 点击导航栏的**Preferences  PackageSettings PackageControl Settings**
 
-```shell
+```bash
 {
 	"bootstrapped": true,
 	"in_process_packages":

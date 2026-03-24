@@ -13,7 +13,7 @@
 
 - 使用composer安装
 
-```shell
+```bash
 composer require dingo/api
 ```
 
@@ -21,7 +21,7 @@ composer require dingo/api
 
 > 在`config/app.php`中的providers中添加以下代码
 
-```shell
+```bash
 'providers' => [
     Dingo\Api\Provider\LaravelServiceProvider::class,
  ]
@@ -29,7 +29,7 @@ composer require dingo/api
 
 - 发布配置文件
 
-```shell
+```bash
 php artisan vendor:publish --provider="Dingo\Api\Provider\LaravelServiceProvider"
 ```
 
@@ -37,7 +37,7 @@ php artisan vendor:publish --provider="Dingo\Api\Provider\LaravelServiceProvider
 
   > API 自带了两个 Facade，你可以酌情使用。
 
-```shell
+```bash
 Dingo\Api\Facade\API# 这个是调度器的 Facade ，并提供了一些好用的辅助方法。
 Dingo\Api\Facade\Route # 你可以使用这个 Facade 来获取 API 的当前路由、请求、检查当前路由的名称等。
 ```
@@ -48,7 +48,7 @@ Dingo\Api\Facade\Route # 你可以使用这个 Facade 来获取 API 的当前路
 >
 >  请查阅[官方文档](https://learnku.com/docs/dingo-api/2.0.0/Configuration/1444)
 
-     ```shell
+     ```bash
      # 配置api前缀如果要使用dingoApi的前缀一定要配置
      API_PREFIX=api 
      # 版本号这个版本号是你的 API 的默认版本号，并且会在一些未提供版本号的情况下作为回调的默认值使用。在生成 API 文档时也会使用这个版本号作为默认值。
@@ -86,7 +86,7 @@ $api = app('Dingo\Api\Routing\Router');
 >
 > 创建路由
 
-```shell
+```bash
 # \Dingo\Api\Routing\Router
 $api->version('v1', function (\Dingo\Api\Routing\Router $api) {
 
@@ -95,7 +95,7 @@ $api->version('v1', function (\Dingo\Api\Routing\Router $api) {
 
 - 更多[使用方式](https://learnku.com/docs/dingo-api/2.0.0/Creating-API-Endpoints/1445)
 
-```shell
+```bash
 # 如果你想一个分组返回多个版本，只需要传递一个版本数组。
 $api->version(['v1', 'v2'], function ($api) {
 

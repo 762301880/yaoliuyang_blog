@@ -13,7 +13,7 @@
 
 
 
-```shell
+```bash
        $inviteRecord = PullNewInviteRecord::where(['inviter_uuid' => $uuid])
             ->where('p_id', '!=', 0)
             ->latest()

@@ -14,7 +14,7 @@
 
 > **/etc/hosts** 中添加
 
-```shell
+```bash
 # 自定义
 127.0.0.1  www.fastadmin.com
 ```
@@ -23,7 +23,7 @@
 
 > 在**/etc/nginx/sites-enabled**目录下添加**www.fastadmin.com**
 
-```shell
+```bash
 
 yly@yly-pc:/etc/nginx/sites-enabled$ cat www.fastadmin.com 
 server {
@@ -145,7 +145,7 @@ www.fastadmin.com/install.php
 >
 > 中间似乎没有针对后台页面JEKSecoHgV.php的伪静态，但是在一些宝塔下可以正常运行（不知道什么原因）。很不幸，我今天碰到了不能正常运行的宝塔，无奈尝试自己写后台页面的伪静态。
 
-```shell
+```bash
 location ~* (runtime|application)/{
 	return 403;
 }
@@ -199,7 +199,7 @@ if (Config::get('fastadmin.loginip_check')) {
 >
 > 然后重启nginx
 
-```nginx
+```bash
 server {
         listen        80;
         server_name  www.hqmedia.com;
@@ -719,7 +719,7 @@ public function getImgAttr($value)
 
 > 不推荐全局改会有问题
 
-```ini
+```bash
 #D:\phpstudy_pro\WWW\work\hq_media\application\database.php
 // 自动写入时间戳字段
 'auto_timestamp'  => false,
@@ -779,7 +779,7 @@ class Project extends Model
 
 这个位置添加 刷新
 
-```shell
+```bash
 api: {
             bindevent: function () {
                 Form.api.bindevent($("form[role=form]"), function () {

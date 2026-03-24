@@ -21,7 +21,7 @@
 
 **必须安装的编译软件**
 
-```shell
+```bash
 # 安装前必须保证系统已经安装了下列软件 除了php 却啥装啥 例如: sudo  apt install -y gcc g++ make autoconf 
 
 php-7.0 或更高版本
@@ -43,13 +43,13 @@ pcre (CentOS系统可以执行命令：yum install pcre-devel)
 
 > 下载swoole的源码包
 
-```shell
+```bash
 wget https://pecl.php.net/get/swoole-4.8.1.tgz
 ```
 
 源码包地址
 
-```shell
+```bash
 https://github.com/swoole/swoole-src/releases  # github
 https://pecl.php.net/package/swoole            # php
 https://gitee.com/swoole/swoole/tags           # gitee 
@@ -57,7 +57,7 @@ https://gitee.com/swoole/swoole/tags           # gitee
 
 **解压源码包**
 
-```shell
+```bash
 tar -zxvf swoole-4.8.1.tgz && cd swoole-4.8.1 
 ```
 
@@ -65,7 +65,7 @@ tar -zxvf swoole-4.8.1.tgz && cd swoole-4.8.1
 
 > 使用phpize来生成php编译配置
 
-```shell
+```bash
 # ubuntu
 sudo apt-get install php-dev # 来安装 phpize 
 # centos
@@ -80,7 +80,7 @@ yum -y install php-devel
 >
 > make install进行安装
 
-```shell
+```bash
 # 如果是 编译是安装的php 请先查询phpize位置  find / -name phpize  
 /usr/local/php7.4.3/bin/phpize  ./configure --with-php-config=/usr/local/php7.4.3/bin/php-config --enable-openssl --enable-http2
 
@@ -95,7 +95,7 @@ make && sudo make install
 
 > --enable-openssl 启用 `SSL` 支持，启用 `SSL` 支持 还有更多编译参数最好都加上尤其是**openssl**
 
-```shell
+```bash
 mkdir -p ~/build && \
 cd ~/build && \
 rm -rf ./swoole-src && \
@@ -114,13 +114,13 @@ make && sudo make install
 
 **如果报错**
 
-```shell
+```bash
 make: *** 没有指明目标并且找不到 makefile。 停止。#  此时需要检查一下有没有安装 gcc g++
 ```
 
 **如果报错**
 
-```shell
+```bash
 # configure: error: Cannot find php-config. Please use --with-php-config=PATH
 # php -r "echo ini_get('extension_dir');" 查看扩展存放位置
 
@@ -142,13 +142,13 @@ centos下linux版本 Linux version 3.10.0-693.2.2.el7.x86_64 (builder@kbuilder.d
 
 **启用扩展**
 
-```shell
+```bash
 编译安装到系统成功后，需要在 php.ini 中加入一行 extension=swoole.so 来启用 Swoole 扩展
 ```
 
 **查看是否安装成功**
 
-```shell
+```bash
 php -m 
 ...
 swoole # 显示出的扩展有swoole即可
@@ -170,7 +170,7 @@ swoole # 显示出的扩展有swoole即可
 
 如果是在服务器安装的话，以` Ubuntu` 系统为例，通过执行下列命令安装即可：
 
-```shell
+```bash
 sudo pecl install swoole
 
 # 安装指定版本
@@ -179,7 +179,7 @@ pecl install https://pecl.php.net/get/swoole-4.8.1.tgz
 
 - 如果提示 `Command 'pecl' not found, but can be installed with:`
 
-```shell
+```bash
 sudo apt install php7.4-dev    # 必须要安装用于执行phpize来生成编译检测脚本 
 sudo apt install php-pear      # 必须安装用于直接安装swoole的命令
 ```
@@ -202,7 +202,7 @@ sudo apt install php-pear      # 必须安装用于直接安装swoole的命令
 >
 > 该命令会输出php.ini文件的完整路径，无论PHP安装目录是否默认
 
-```shell
+```bash
 [swoole]
 extension=swoole.so
 ```
@@ -224,7 +224,7 @@ extension=swoole.so
 
 > 本人使用 **swoole-cli-v5.0.1-cygwin64**版本
 
-```shell
+```bash
 # wget 下载
 wget https://github.com/swoole/swoole-src/releases/download/v4.8.11/swoole-cli-v4.8.11-cygwin64.zip
 ```
@@ -241,7 +241,7 @@ wget https://github.com/swoole/swoole-src/releases/download/v4.8.11/swoole-cli-v
 
 **将项目解压到喜欢的目录**
 
-```shell
+```bash
 D:\Program Files\swoole-cli-v4.8.11-cygwin64
 
 # 目录下的文件为
@@ -279,7 +279,7 @@ D:.
 
 ## 测试使用
 
-```shell
+```bash
 # 查询版本
 C:\Users\铺先生技术研发中心>swoole-cli -v
 Swoole 4.8.11 (cli) (built: Jul  8 2022 18:57:30) (NTS)
@@ -438,7 +438,7 @@ sada
 
 ### 使用`wget`安装
 
-```shell
+```bash
 wget https://pecl.php.net/get/swoole-4.6.6.tgz 
 ```
 
@@ -446,7 +446,7 @@ wget https://pecl.php.net/get/swoole-4.6.6.tgz
 
 - 此段内容截取至[博客](https://www.cnblogs.com/gyfluck/p/11275114.html)
 
-```shell
+```bash
   #检查一下环境和依赖要求，查看swoole官网：https://wiki.swoole.com/。
 
 　　#查看依赖，https://wiki.swoole.com/wiki/page/7.html。
@@ -467,13 +467,13 @@ wget https://pecl.php.net/get/swoole-4.6.6.tgz
 
 ### 安装依赖
 
-```shell
+```bash
 yum -y install gcc gcc-c++ autoconf pcre-devel make
 ```
 
 ### 编译 
 
-```shell
+```bash
 phpize
 ./configure 
 make
@@ -484,7 +484,7 @@ make install
 
 - 解压安装包
 
-```shell
+```bash
 tar -zxvf swoole-src-4.6.6
 ```
 
@@ -492,7 +492,7 @@ tar -zxvf swoole-src-4.6.6
 
 - 在gitHub上下载swoole压缩包并上传到服务器中
 
-```shell
+```bash
 cd swoole-src-4.6.6 # 进入已解压的swoole
 ```
 
@@ -500,13 +500,13 @@ cd swoole-src-4.6.6 # 进入已解压的swoole
 
 - 查询php.ini 的位置
 
-```shell
+```bash
 find / -name php.ini # 使用find命令查询文件的位置
 ```
 
 - 在php.ini中添加配置
 
-```shell
+```bash
 extension=swoole.so
 ```
 
@@ -514,7 +514,7 @@ extension=swoole.so
 
 - 查看安装的扩展
 
-```shell
+```bash
 php -m
 ```
 

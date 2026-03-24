@@ -28,7 +28,7 @@
 >
 > 这是 PHP 框架常用的 Nginx 配置方式，目的是隐藏入口文件 index.php，让 URL 更简洁美观（如 `/user/123` 替代 `/index.php?c=user&a=detail&id=123`）。
 
-```nginx
+```bash
 location / { // …..省略部分代码
    if (!-e $request_filename) {
    		rewrite  ^(.*)$  /index.php?s=/$1  last;

@@ -219,7 +219,7 @@ $result = $sku_service->deleteSku($product_id, $sku_id);
 
 **原数据**
 
-```shell
+```bash
 [{
     "name": "颜色",
     "attr_values": "白色,黑色"

@@ -74,7 +74,7 @@
 
 ###  自动刷视频
 
-```shell
+```bash
 auto.waitFor();
 toast("开始刷视频");
 

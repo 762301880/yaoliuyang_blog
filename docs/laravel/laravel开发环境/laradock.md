@@ -767,7 +767,7 @@ docker-compose build php
 
 你可以在 nginx 配置文件自定义服务器名称,如下:
 
-```conf
+```bash
 server_name laravel.test;
 ```
 

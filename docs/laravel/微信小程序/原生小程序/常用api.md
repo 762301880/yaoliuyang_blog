@@ -72,7 +72,7 @@
 
 **解决测试调用token线上token失效问题**
 
-```shell
+```bash
 # 创建公用路由
  Route::post('get_mini_program_access_token', 'MiniProgram/getDevAccessToken');//解决测试服获取小程序access_token问题
 # 对应控制器

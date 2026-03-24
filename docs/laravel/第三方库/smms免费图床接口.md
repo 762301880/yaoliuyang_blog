@@ -6,7 +6,7 @@
 
 
 
-```shell
+```bash
 <?php
 
 namespace App\Http\Controllers;

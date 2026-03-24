@@ -27,7 +27,7 @@
 
 或者直接在终端使用命令下载
 
-```shell
+```bash
 wget https://dev.mysql.com/get/mysql-apt-config_0.8.20-1_all.deb
 ```
 
@@ -41,13 +41,13 @@ wget https://dev.mysql.com/get/mysql-apt-config_0.8.20-1_all.deb
 >
 > 记住看清楚应该是最上面一个来着别选错了
 
-```shell
+```bash
 sudo dpkg -i mysql-apt-config_0.8.20-1_all.deb
 ```
 
 **补充**
 
-```shell
+```bash
 # 如果报错
 #Warning: apt-key should not be used in scripts (called from postinst maintainerscript of the package mysql-apt-config)
 sudo dpkg-reconfigure mysql-apt-config
@@ -58,7 +58,7 @@ sudo dpkg -P mysql-apt-config
 
 ### 刷新软件包
 
-```shell
+```bash
 sudo apt-get update
 
 # 如果报错 正在读取软件包列表... 完成          
@@ -72,7 +72,7 @@ sudo apt-get  upgrade
 
 ### 执行安装
 
-```shell
+```bash
 # 选择完版本之后执行 即可
 sudo apt-get install mysql-server 
 ```
@@ -88,7 +88,7 @@ sudo apt-get install mysql-server
 
 > 登录用户并输入密码
 
-```shell
+```bash
 root@2c546338dc3e:~# mysql -uroot -p
 Enter password:
 Welcome to the MySQL monitor.  Commands end with ; or \g.
@@ -131,7 +131,7 @@ mysql>
 >
 > MariaDB数据库管理系统是MySQL的一个分支，主要由开源社区在维护，采用GPL授权许可 MariaDB的目的是完全兼容MySQL，包括API和命令行，使之能轻松成为MySQL的代替品。在存储引擎方面，使用XtraDB（英语：XtraDB）来代替MySQL的InnoDB。 MariaDB由MySQL的创始人Michael Widenius（英语：Michael Widenius）主导开发，他早前曾以10亿美元的价格，将自己创建的公司MySQL AB卖给了SUN，此后，随着SUN被甲骨文收购，MySQL的所有权也落入Oracle的手中。MariaDB名称来自Michael Widenius的女儿Maria的名字。
 
-```shell
+```bash
 #  apt 安装
 sudo apt-get install mariadb-server mariadb-client
 
@@ -160,7 +160,7 @@ sudo systemctl daemon-reload
 
 # php 安装
 
-```shell
+```bash
 sudo apt update --fix-missing # 更新镜像源
 sudo apt -y install php7.4-fpm # 不推荐因为deepin 默认最高php版本是7.3
 sudo apt install php #推荐
@@ -191,7 +191,7 @@ sudo find /etc -name "*php*" |xargs  rm -rf
 
 ### pecl安装
 
-```shell
+```bash
 sudo pecl install swoole
 
 
@@ -201,7 +201,7 @@ sudo pecl install swoole-4.8.12
 
 **如果安装过程中出现报错:phpize: not found**
 
-```shell
+```bash
 yaoliuyang@yaoliuyang-PC:~/Documents/study_docs/phpStudyDoc$ sudo pecl install swoole
 WARNING: channel "pecl.php.net" has updated its protocols, use "pecl channel-update pecl.php.net" to update
 downloading swoole-4.8.12.tgz ...
@@ -218,7 +218,7 @@ sudo apt -y install php-dev
 
 **安装过程中提示开启扩展**
 
-```shell
+```bash
 enable sockets supports? [no] : yes
 enable openssl support? [no] : yes
 enable http2 support? [no] : yes
@@ -245,7 +245,7 @@ ERROR: `make' failed
 
 **安装完成**
 
-```shell
+```bash
 Build process completed successfully
 Installing '/usr/include/php/20180731/ext/swoole/php_swoole.h'
 Installing '/usr/include/php/20180731/ext/swoole/config.h'
@@ -271,7 +271,7 @@ echo "extension=swoole.so" >> /etc/php/7.3/cli/php.ini
 
 > nginx-full nginx E: Sub-process /usr/bin/dpkg returned an error code (1)
 
-```shell
+```bash
 service apache2 status
 service apache2 stop
 sudo apt autoremove apache2
@@ -279,7 +279,7 @@ sudo apt autoremove apache2
 
 
 
-```shell
+```bash
 sudo apt -y  install php-fpm
 sudo apt -y  install nginx
 ```
@@ -288,7 +288,7 @@ sudo apt -y  install nginx
 
 **创建nginx站点配置**
 
-```shell
+```bash
 # 创建虚拟域名
 sudo vim /etc/hosts
 
@@ -301,7 +301,7 @@ cd /etc/nginx/sites-enabled && sudo vim www.cs.com
 
 **nginx配置**
 
-```shell
+```bash
 server {
     listen 80;
     server_name www.cs.com;

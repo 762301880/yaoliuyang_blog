@@ -67,7 +67,7 @@
 >
 > 会出现并发情况
 
-```shell
+```bash
        $name ='001';
         if (Stu::where('sname', $name)->first() == null) {
            Stu::create(['sname' => $name]);
@@ -80,7 +80,7 @@
 
 > 记住悲观锁必须依赖于事务才可以执行
 
-```shell
+```bash
        $name ='001';
         DB::beginTransaction();
         if (Stu::where('sname', $name)->lockForUpdate()->first() == null) {

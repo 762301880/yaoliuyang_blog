@@ -142,7 +142,7 @@ CREATE TABLE `role_permission` (
 
 > is_ctl  参与权限控制
 
-```shell
+```bash
 Route::group('api/pxs', function () {
     //app 业务模块
     Route::group('appbss', function () {
@@ -160,7 +160,7 @@ Route::group('api/pxs', function () {
 
 > 代码取自`项目\thinkphp\library\think\console\command\RouteList.php`  **getRouteList**方法
 
-```shell
+```bash
 <?php
 /**
  * Created by PhpStorm.

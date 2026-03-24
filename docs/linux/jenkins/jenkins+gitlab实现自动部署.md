@@ -35,7 +35,7 @@
 >
 > 这里我找了个可以用的版本因为2.60.3 版本的死活缺少插件装了也没有，最新版本的安装gitlab 扩展提示jdk版本过高不支持
 
-```shell
+```bash
 # 指定jdkb
 docker pull jenkins/jenkins:latest-jdk8 
 
@@ -62,7 +62,7 @@ docker logs jenkins
 
 在日志中搜索 `initialAdminPassword`，会看到类似这样的内容：
 
-```shell
+```bash
 *************************************************************
 *************************************************************
 *************************************************************
@@ -90,7 +90,7 @@ This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
 >
 > 本地拥有的是root权限的目录,容器中 的目录uid为1000
 
-```shell
+```bash
 mkdir /var/jenkins && chown -R 1000 /var/jenkins/ # 这一步不执行端口都无法显示出来
 docker run  -itd -p 8080:8080 -p 50000:50000 --restart=always  --name jenkins  -v /var/jenkins:/var/jenkins_home 镜像id
 ```
@@ -101,7 +101,7 @@ docker run  -itd -p 8080:8080 -p 50000:50000 --restart=always  --name jenkins  -
 
 ![1636450936(1).jpg](https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/xAjnCo9B8XZOtKN.png)
 
-```shell
+```bash
 # 查看容器
 docker ps -a
 # 进入容器内部
@@ -125,7 +125,7 @@ jenkins@37b124ebf446:/$ cat /var/jenkins_home/secrets/initialAdminPassword
 
 ![zGyWpDOHJ83xM6E](https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/zGyWpDOHJ83xM6E.png)
 
-```shell
+```bash
 # https://updates.jenkins-ci.org/download/plugins/cloudbees-folder/下载cloudbees-folder 插件
 # --no-check-certificate不校验证书	
 # 在宿主机的/var/jenkins_home下找到war/WEB-INF/detached-plugins这个目录，添加这个插件，然后重新启动jenkins容器
@@ -233,7 +233,7 @@ docker restart 容器id
 >
 > **不推荐使用 `git reset --hard` 这条命令会将现有代码也会保存在服务器上**
 
-```shell
+```bash
 cd /data/work/laravel_study && git clean -f &&  git stash && git pull && git stash clear
 ```
 
@@ -247,7 +247,7 @@ cd /data/work/laravel_study && git clean -f &&  git stash && git pull && git sta
 
 > 可以在清华大学镜像站下载war包复制到替换容器中的以下目录
 
-```shell
+```bash
 /usr/share/jenkins/jenkins.war
 ```
 
@@ -305,7 +305,7 @@ cd /data/work/laravel_study && git clean -f &&  git stash && git pull && git sta
 >
 > 我们只需要删除超前的文件即可
 
-```shell
+```bash
 git clean -n
 // 是一次 clean 的演习, 告诉你哪些文件会被删除，不会真的删除
  
@@ -334,7 +334,7 @@ git clean
 
 > 记住这个命令**千万不要再本地使用会导致误删很多东西**
 
-```shell
+```bash
 git clean -f
     
 # 例

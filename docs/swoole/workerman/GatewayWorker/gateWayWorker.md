@@ -21,7 +21,7 @@
 
 - 使用`composer`在项目中安装
 
-```shell
+```bash
 composer require workerman/gatewayclient
 ```
 

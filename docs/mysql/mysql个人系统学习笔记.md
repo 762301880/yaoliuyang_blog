@@ -78,7 +78,7 @@ mysql官网下载地址 [https://dev.mysql.com/downloads/mysql/](https://dev.mys
 
 4、编辑 my.ini 文件 ,注意替换路径位置
 
-```ini
+```bash
 [mysqld]
 # 目录一定要换成自己的
 basedir=D:\Program Files\mysql-5.7\
@@ -244,7 +244,7 @@ CREATE DATABASE IF NOT EXISTS school
 
 **删除数据库**
 
-```shell
+```bash
 DROP DATABASE IF EXISTS test
 ```
 
@@ -2869,7 +2869,7 @@ show variables like'%query_log%'
 >
 > 手动更改一下变量 但是设置了局部变量我们就可以 设置一次全部调用
 
-```shell
+```bash
 
 SET @fs_no = 'FS20250312000005';
 
@@ -3002,7 +3002,7 @@ SHOW VARIABLES LIKE 'max_connections';
 
 > **默认值**通常较低（如151），需确认是否满足测试需求。
 
-```shell
+```bash
 +-----------------+-------+
 | Variable_name   | Value |
 +-----------------+-------+
@@ -3020,14 +3020,14 @@ SET GLOBAL max_connections = 1000;  -- 临时修改（重启后失效）
 
 **永久生效**需修改MySQL配置文件（如`my.cnf`或`my.ini`）：
 
-```ini
+```bash
 [mysqld]
 max_connections = 1000
 ```
 
 修改后重启MySQL服务
 
-```shell
+```bash
 sudo systemctl restart mysql
 ```
 

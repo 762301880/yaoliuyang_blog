@@ -15,7 +15,7 @@
 - 使用`composer`安装
 - 在项目的根目录执行以下命令
 
-```shell
+```bash
 composer require phpoffice/phpword
 ```
 

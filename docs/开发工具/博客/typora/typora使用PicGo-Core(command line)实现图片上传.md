@@ -28,7 +28,7 @@
 >
 > **配置文件地址  C:\Users\yaoliuyang\.picgo\config.json**
 
-```shell
+```bash
 {
     "picBed": {
     "uploader": "aliyun",
@@ -85,7 +85,7 @@
 >    具体说明可以参考：[此处廖雪峰博客](https://www.liaoxuefeng.com/wiki/1022910821149312/1023025597810528)
 > 2. 在 cmd 窗口运行 
 
-```shell
+```bash
 npm install picgo -g
 ```
 
@@ -93,7 +93,7 @@ npm install picgo -g
 
 > 1. 用于使用gitee作为图床 和 上传图片时能在文件前缀加上时间戳
 
-```shell
+```bash
 picgo install gitee-uploader super-prefix
 ```
 
@@ -115,7 +115,7 @@ picgo install gitee-uploader super-prefix
 
 ![image-20240412135529640](https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/image-20240412135529640.png)
 
-```shell
+```bash
 {
   "repo": "", // 仓库名，格式是username/reponame
   "token": "", // github token

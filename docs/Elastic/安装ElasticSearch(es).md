@@ -52,14 +52,14 @@
 >
 > 取消**#http.port: 9200** 注释直接修改端口重新启动即可
 
-```shell
+```bash
 # 例如
 http.port: 9700
 ```
 
 默认情况下，Elastic 只允许本机访问，如果需要远程访问，可以修改 Elastic 安装目录的`config/elasticsearch.yml`文件，去掉`network.host`的注释，将它的值改成`0.0.0.0`，然后重新启动 Elastic。
 
-```shell
+```bash
 network.host: 0.0.0.0  #设成0.0.0.0让任何人都可以访问。线上服务不要这样设置，要设成具体的 IP。
 ```
 
@@ -194,7 +194,7 @@ curl -X PUT http://localhost:9200/test
 
 > 服务器返回一个 JSON 对象，里面的 acknowledged 字段表示操作成功。
 
-```shell
+```bash
 {"acknowledged":true,"shards_acknowledged":true,"index":"test"}
 ```
 
@@ -202,7 +202,7 @@ curl -X PUT http://localhost:9200/test
 
 > 服务器返回值为，里面的 acknowledged 字段表示操作成功
 
-```shell
+```bash
 curl -X DELETE http://localhost:9200/test
 
 # 返回
@@ -211,13 +211,13 @@ curl -X DELETE http://localhost:9200/test
 
 ### 查看索引
 
-```shell
+```bash
 curl -X GET http://localhost:9200/_cat/indices?v
 ```
 
 > 服务器会列出所有索引
 
-```shell
+```bash
 health status index            uuid                   pri rep docs.count docs.deleted store.size pri.store.size
 green  open   .geoip_databases if2iRDr1QDGyuBsBZW-rMg   1   0         33            0     31.1mb         31.1mb
 yellow open   stu_index        taXvtyClTWqxnTrbHtmQnA   1   1        500            0     85.8kb         85.8kb

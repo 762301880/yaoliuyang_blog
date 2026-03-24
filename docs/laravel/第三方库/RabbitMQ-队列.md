@@ -29,7 +29,7 @@
 
 > 安装后默认用户名&密码为**guest**
 
-```shell
+```bash
 # 请用下面的示例安装-这里只是展示基础安装方法
 docker run -itd --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.12-management
 ```
@@ -38,7 +38,7 @@ docker run -itd --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.12-m
 
 > 如果要更改 / 的默认用户名和密码，可以使用 和 环境变量执行此操作。这些变量以前在特定于 docker 的入口点 shell 脚本中可用，但现在可以直接在 RabbitMQ 中使用。`guest``guest``RABBITMQ_DEFAULT_USER``RABBITMQ_DEFAULT_PASS`
 
-```shell
+```bash
 docker run -itd \
     --hostname my-rabbit \ 
     --name some-rabbit \ 

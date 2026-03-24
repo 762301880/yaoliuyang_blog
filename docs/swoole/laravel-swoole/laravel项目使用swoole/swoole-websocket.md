@@ -13,7 +13,7 @@
 
 > [关于command命令可以查看官方文档](https://learnku.com/docs/laravel/8.x/artisan/9387#tinker)  
 
-```shell
+```bash
 php artisan make:command Swoole     # 创建command类
 ```
 
@@ -268,7 +268,7 @@ class MessageHandler
 
 **使用**
 
-```shell
+```bash
 php PushServer.
 ```
 
@@ -302,7 +302,7 @@ php PushServer.
 
 **laravel控制器**
 
-```shell
+```bash
 Redis::rpush('ws:push:queue', json_encode([
     'fd' => $fd,
     'message' => $message,
@@ -466,7 +466,7 @@ REDIS_PORT=6379
 
 1. 启动 Laravel 队列 Worker（或者用 `sync` 直接处理 job）：
 
-```shell
+```bash
 php artisan queue:work
 ```
 

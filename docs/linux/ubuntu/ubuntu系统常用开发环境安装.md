@@ -2,19 +2,19 @@
 
 ## 1.1 使用`wget`命令从网络下载
 
-```shell
+```bash
 wget https://dl.pstmn.io/download/latest/linux64
 ```
 
 ## 1.2解压下载的postman
 
-```shell
+```bash
 tar -zxvf  +需要解压的postman包
 ```
 
 ## 1.3打开postman
 
-```shell
+```bash
 cd Postman/ #进入解压的postman目录
 ./Postman   #打开postman软件
 ```
@@ -23,7 +23,7 @@ cd Postman/ #进入解压的postman目录
 
 linux安装typora[官网文档](https://www.typora.io/#linux)
 
-```shell
+```bash
 # or run:
 # sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys BA300B7755AFCFAE
 wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
@@ -40,7 +40,7 @@ sudo apt-get install typora
 
 ## 3.1 使用命令下载deb包
 
-```shell
+```bash
 wget https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
 ```
 
@@ -50,13 +50,13 @@ wget https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
 
 - 要列出你系统中安装的所有包，输入下面的命令：
 
-```shell
+```bash
 dpkg --get-selections
 ```
 
 - 找到对应的包之后删除
 
-```shell
+```bash
 sudo dpkg -r dbeaver-ce
 ```
 

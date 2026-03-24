@@ -12,7 +12,7 @@ https://gitee.com/yao_liuyang/linux_shell/blob/master/redis_backup.sh
 
 # 代码备份
 
-```shell
+```bash
 #!/bin/bash
 
 # Redis自动备份脚本
@@ -91,7 +91,7 @@ log "备份流程完成"
 
 **解压备份的文件**
 
-```sh
+```bash
 gunzip redis_backup_20250430-162026.rdb.gz
 ```
 
@@ -113,13 +113,13 @@ chmod +x redis_backup.sh
 
 3. 添加定时任务（每日凌晨2点执行）：
 
- ```shell
+ ```bash
 crontab -e
  ```
 
 添加以下内容：
 
-```shell
+```bash
 0 2 * * * /path/to/redis_backup.sh
 ```
 

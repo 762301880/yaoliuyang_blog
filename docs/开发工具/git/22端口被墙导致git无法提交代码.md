@@ -14,7 +14,7 @@
 
 1. DNS 能否解析
 
-```shell
+```bash
 nslookup github.com
 # 或
 dig +short github.com
@@ -22,14 +22,14 @@ dig +short github.com
 
 1. HTTPS 是否通（这比 ping 更关键）
 
-```shell
+```bash
 curl -v https://github.com/
 curl -I https://api.github.com/   # 只看响应头
 ```
 
 1. 测试 Git HTTPS 推送端口（443）能否连通
 
-```shell
+```bash
 # mac / linux
 nc -vz github.com 443
 # windows (PowerShell)
@@ -38,7 +38,7 @@ Test-NetConnection github.com -Port 443
 
 1. 测试 SSH（Git 的 SSH 服务）：
 
-```shell
+```bash
 # 试默认 SSH（22）
 ssh -T git@github.com -vvv
 # 试 GitHub 提供的 443 端口 SSH（很多被墙网络用这个）
@@ -49,7 +49,7 @@ nc -vz ssh.github.com 443
 
 1. 用 Git 自带的调试输出看细节（推送一次测试）
 
-```shell
+```bash
 GIT_TRACE=1 GIT_CURL_VERBOSE=1 git push origin main
 ```
 

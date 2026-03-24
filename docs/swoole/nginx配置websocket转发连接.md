@@ -16,7 +16,7 @@
 >
 > 通过修改这个示例配置中的注释部分，你可以将其适配到你自己的Nginx和Swoole WebSocket环境中，以实现WebSocket的代理连接。
 
-```nginx
+```bash
 server {
     listen 80; # 监听端口，根据需要进行更改
     server_name your_domain.com; #  # 替换为你的域名或ip地址

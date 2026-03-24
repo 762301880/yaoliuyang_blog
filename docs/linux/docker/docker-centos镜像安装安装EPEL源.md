@@ -18,13 +18,13 @@
 
 **yum安装**
 
-```shell
+```bash
 yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 ```
 
 **rpm安装**
 
-```shell
+```bash
 # 下载rpm包
 wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm
 # rpm安装

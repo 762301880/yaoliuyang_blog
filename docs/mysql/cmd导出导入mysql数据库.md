@@ -75,7 +75,7 @@ Enter password: ******
 
 ## 导入数据库
 
-```shell
+```bash
 source `+你的sql表地址`
 #例子
 C:\Program Files\MySQL\MySQL Server 5.7\bin>mysql -uroot -p
@@ -170,7 +170,7 @@ mysqldump -u [用户名] -p [密码] [数据库名] > [导出文件名].sql 2> [
 
 1. 使用 mysqldump 命令备份：使用这个命令可以备份整个 MySQL 数据库、多个数据库或单个表。例如：
 
-```shell
+```bash
 mysqldump -h localhost -u root -p database_name > /path/to/backup_file.sql
 ```
 

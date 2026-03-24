@@ -8,7 +8,7 @@
 
 > 在桌面创建文件**postman.desktop**并编辑
 
-```shell
+```bash
 # postman.desktop
 
 

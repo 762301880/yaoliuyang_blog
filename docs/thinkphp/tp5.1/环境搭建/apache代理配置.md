@@ -4,7 +4,7 @@
 >
 > 项目\public\.htaccess
 
-```shell
+```bash
 <IfModule mod_rewrite.c>
 Options +FollowSymlinks -Multiviews
 RewriteEngine On

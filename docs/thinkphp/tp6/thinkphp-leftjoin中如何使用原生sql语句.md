@@ -16,7 +16,7 @@
 
 ![2021-08-16 21-40-07屏幕截图.png](https://gitee.com/yaolliuyang/blogImages/raw/master/blogImages/XHWsPh5Dynzrd8v.png)
 
-```shell
+```bash
  Stu::where('id',1)->LeftJoin('(SELECT cname , id AS c_id FROM class_s GROUP BY id ) AS class_s','stu.class_id = class_s.c_id',[])->select();
  
  # 等同于sql

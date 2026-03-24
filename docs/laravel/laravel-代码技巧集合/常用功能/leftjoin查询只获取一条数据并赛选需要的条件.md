@@ -37,7 +37,7 @@ CREATE TABLE `article` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC COMMENT='文章表';
 ```
 
-```shell
+```bash
 # 学生表信息
 1	李广	1	1998-02-12 08:22:13	2019-07-20 14:22:16	男
 2	何青	1	1985-07-22 18:19:13	2019-07-17 21:50:38	女
@@ -63,7 +63,7 @@ CREATE TABLE `article` (
 
 ## 代码逻辑
 
-```shell
+```bash
  $stu = Stu::leftJoin(\DB::raw('(select stu_id, MAX(click) AS click from article GROUP BY stu_id) AS article'), 
  \DB::raw('stu.id'), \DB::raw('article.stu_id'))
             ->get();
@@ -74,7 +74,7 @@ CREATE TABLE `article` (
 
 - 对应原生sql语句
 
-```shell
+```bash
 select * from `stu` left join (select stu_id, MAX(click) AS click from article GROUP BY stu_id) AS article on stu.id = article.stu_id
 ```
 

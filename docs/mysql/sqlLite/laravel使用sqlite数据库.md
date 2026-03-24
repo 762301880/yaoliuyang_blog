@@ -51,7 +51,7 @@
 
 ### alpine安装扩展
 
-```shell
+```bash
 apk add sqlite3  # 安装sqlite3扩展
 apk add php-sqlite3 # 安装php扩展
 ```
@@ -66,7 +66,7 @@ apk add php-sqlite3 # 安装php扩展
 
 **配置环境变量**
 
-```shell
+```bash
 # 将下载的 sqlite-tools-win32-x86-3390200.zip  sqlite-dll-win32-x86-3390200.zip 解压到喜欢的目录
 # 例如创建文件夹 D:\Program Files\sqlite3，并在此文件夹下解压上面两个压缩文件，将得到 sqlite3.def、sqlite3.dll 和 sqlite3.exe 文件。
 ```
@@ -75,7 +75,7 @@ apk add php-sqlite3 # 安装php扩展
 
 > 添加 `D:\Program Files\sqlite3`到 **PATH** 环境变量，最后在命令提示符下，使用 **sqlite3** 命令，将显示如下结果。
 
-```shell
+```bash
 D:\>sqlite3
 SQLite version 3.27.2 2019-02-25 16:06:06
 Enter ".help" for usage hints.
@@ -88,7 +88,7 @@ sqlite>
 
 > 将**sqlite3.dll**文件复制到php扩展目录例如**D:\phpstudy_pro\Extensions\php\php7.4.3nts\ext**目录下
 
-```shell
+```bash
 # 修改php.ini文件
 extension=pdo_sqlite     # 找到这一行取消注释
 ```
@@ -113,7 +113,7 @@ extension=pdo_sqlite     # 找到这一行取消注释
 
 ​	**修改.env**
 
-```shell
+```bash
 DB_CONNECTION=sqlite     # 指定DB连接为sqlite
 ```
 
@@ -139,7 +139,7 @@ $user=DB::connection('sqlite')->table('user')->insert(['name'=>'张三']);
 
 **解决方案**
 
-```shell
+```bash
 # 解决方案给项目目录的 databases文件夹设置一个最大权限
   chmod -R 755 storage/
 ```
@@ -150,7 +150,7 @@ $user=DB::connection('sqlite')->table('user')->insert(['name'=>'张三']);
 
 > 这个错误通常是由于在使用PHP连接SQLite数据库时缺少SQLite驱动程序导致的。要解决这个问题，你需要安装并启用PHP中的SQLite驱动程序。你可以使用以下步骤来安装SQLite驱动程序：
 
-```shell
+```bash
 bash-5.0# php -m
 
 # 查询是否有次驱动
@@ -191,7 +191,7 @@ Zend OPcache
 
 > 将**sqlite3.dll**文件复制到php扩展目录例如**D:\phpstudy_pro\Extensions\php\php7.4.3nts\ext**目录下
 >
-> ```shell
+> ```bash
 > 修改php.ini文件
 > extension=pdo_sqlite     # 找到这一行取消注释
 > ```

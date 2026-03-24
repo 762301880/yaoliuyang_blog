@@ -123,7 +123,7 @@ docker run -itd mycentos:0.1
 >
 >在一个空目录下，新建一个名为 Dockerfile 文件，并在文件内添加以下内容：
 
-```shell
+```bash
 mkdir mynginx
 cd mynginx
 touch Dockerfile     # 名字可以随机,建议Dockerfile
@@ -157,7 +157,7 @@ docker build -f   Fockerfile绝对路径 .
 
 > ADD复制本地主机文件、目录或者远程文件 URLS 从 并且添加到容器指定路径中 。
 
-```shell
+```bash
 ADD <src>... <dest>
 ```
 
@@ -180,7 +180,7 @@ ADD hom?.txt /mydir/    # ? is replaced with any single character
 
 > COPY复制新文件或者目录从 并且添加到容器指定路径中
 
-```shell
+```bash
 COPY a.txt /a.txt 
 # 此命令将Dockerfile中同级的文件复制到容器内部中	
 # 用法同ADD，唯一的不同是不能指定远程文件 URLS。 
@@ -210,7 +210,7 @@ COPY a.txt /a.txt
 >
 >2. .推荐 tomcat 压缩包，jdk工具包源码文件下载到mytomcat文件夹中
 
-```shell
+```bash
 mkdir mytomcat && cd mytomcat && touch Dockerfile && wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.54/bin/apache-tomcat-9.0.54.tar.gz && wget https://download.java.net/openjdk/jdk8u41/ri/openjdk-8u41-b04-linux-x64-14_jan_2020.tar.gz
 ```
 
@@ -294,7 +294,7 @@ CMD /usr/local/apache-tomcat-9.0.54/bin/startup.sh && tail -F /usr/local/apache-
 
 - 构建[^dockerfile]
 
-```shell
+```bash
 docker build -t mytomcat:0.1 .
 ```
 

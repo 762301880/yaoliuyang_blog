@@ -13,7 +13,7 @@
 
 **安装openrc**
 
-```shell
+```bash
 apk add openrc  # 安装openrc
 ```
 
@@ -21,7 +21,7 @@ apk add openrc  # 安装openrc
 
 > **<font color="red">经过测试此启动只针对于纯alpine系统有效,docker-alpine系统镜像并不会生效</font>**
 
-```shell
+```bash
 rc-update add {service-name} {run-level-name}            #  service-name 需要启动的服务名称  run-level-name 运行的级别名称
 
 # 例子
@@ -30,13 +30,13 @@ rc-update add nginx default
 
 ### 查看手动启动的服务
 
-```shell
+```bash
 rc-status --manual
 ```
 
 ### 查看崩溃的服务
 
-```shell
+```bash
 rc-status --crashed
 ```
 
@@ -44,7 +44,7 @@ rc-status --crashed
 
 执行以下命令：
 
-```shell
+```bash
 rc-service --list
 # 或
 rc-service --list | grep -i nginx
@@ -54,13 +54,13 @@ rc-service --list | grep -i nginx
 
 执行以下命令：
 
-```shell
+```bash
 rc-status --list
 ```
 
 可以使用rc命令更改运行级别：
 
-```shell
+```bash
 rc {runlevel}
 # 更改级别
 rc boot
@@ -70,7 +70,7 @@ rc shutdown
 
 ## 启用/停止/重启服务
 
-```shell
+```bash
 rc-service Service名 start/stop/restart
 ```
 
@@ -80,7 +80,7 @@ rc-service Service名 start/stop/restart
 
 > 编辑**/etc/rc.conf** 配置文件
 
-```shell
+```bash
 # vim /etc/rc.conf
 
 # rc_logger launches a logging daemon to log the entire rc process to

@@ -22,7 +22,7 @@
 
 ### 安装
 
-```shell
+```bash
 apt install nano
 ```
 

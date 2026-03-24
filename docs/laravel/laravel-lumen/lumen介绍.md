@@ -56,7 +56,7 @@ Hello World
 
 ## 3.2`注意如果显示以下错误代码`
 
-```shell
+```bash
 Not Found
 The requested URL /hello_world was not found on this server.
 Additionally, a 404 Not Found error was encountered while trying to use an ErrorDocument to handle the request.
@@ -67,7 +67,7 @@ Additionally, a 404 Not Found error was encountered while trying to use an Error
 * 在项目`public\`.htaccess	中配置
 * 参考[配置](https://learnku.com/docs/laravel/8.x/installation/9354#7ad69c)
 
-```shell
+```bash
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes

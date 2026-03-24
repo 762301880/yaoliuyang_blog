@@ -2,7 +2,7 @@
 
 > 如果php是对应版本的后面也要加上对应的版本号例如php7-curl
 
-```shell
+```bash
 apt -y install  php-mysql php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc php-mbstring  php-soap curl php-curl 
 ```
 
@@ -22,14 +22,14 @@ apt -y install  php-mysql php-gd php-ldap php-odbc php-pear php-xml php-xmlrpc p
 
 对于 Ubuntu/Debian 系统：
 
-```shell
+```bash
 apt-get update
 apt-get install zlib1g-dev
 ```
 
 对于 CentOS/RHEL 系统：
 
-```shell
+```bash
 yum install zlib-devel
 ```
 
@@ -41,14 +41,14 @@ yum install zlib-devel
 
 对于 Ubuntu/Debian 系统：
 
-```shell
+```bash
 apt-get update
 apt-get install libpng-dev
 ```
 
 对于 CentOS/RHEL 系统：
 
-```shell
+```bash
 yum install libpng-devel
 ```
 

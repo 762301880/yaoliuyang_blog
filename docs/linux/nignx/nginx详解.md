@@ -8,7 +8,7 @@
 
 ## nginx基本概念
 
-```shell
+```bash
 # nginx基本概念
 1 nginx 是什么可以做什么事情
 2 反向代理
@@ -32,7 +32,7 @@
 >
 > location(URL匹配)
 
-```shell
+```bash
 
 yaoliuyang@yaoliuyang-PC:/etc/nginx$ cat nginx.conf 
 # 全局块 从配置文件到events块的内容，主要会设置一些影响nginx服务器整体运行的配置指令，主要包括配置运行Nginx服务器的用户（组），允许生成worker processes数，进程PID存放路径，日志存放路径和类型以及配置文件引入等。
@@ -121,7 +121,7 @@ http {
 
 > 
 
-```nginx
+```bash
 server {
         listen 80 default_server; #监听的端口号80端口
         server_name www.cs.com; # 主机名
@@ -156,7 +156,7 @@ server {
 >
 > www.123.com 可以在/etc/hosts中添加一个虚拟域名
 
-```nginx
+```bash
 #  监听本地80端口 服务名称是www.123.com  路径是 /的时候转发到 www.baidu.com
 server{
    listen 80;
@@ -180,7 +180,7 @@ server{
 >
 > 访问www.123.com:1997/al 直接跳转到www.aliyun.com
 
-```nginx
+```bash
 server{
    listen 1997;
    server_name www.123.com;
@@ -255,7 +255,7 @@ server{
 1. 静态网站配置
 假设你有一个简单的静态网站，文件存放在 /var/www/html 目录下。你需要配置Nginx来提供这个网站的服务。
 
-```nginx
+```bash
 # 定义一个server块，监听80端口
 server {
     listen 80;
@@ -281,7 +281,7 @@ server {
 2. 反向代理配置
 假设你有一个后端应用运行在 http://localhost:3000，你希望使用Nginx作为反向代理来处理前端请求。
 
-```nginx
+```bash
 # 定义一个server块，监听80端口
 server {
     listen 80;
@@ -307,7 +307,7 @@ server {
 3. 负载均衡配置
 假设你有两个后端应用分别运行在 http://backend1:3000 和 http://backend2:3000，你希望使用Nginx进行负载均衡。
 
-```nginx
+```bash
 # 定义一个upstream块，配置后端服务器
 upstream backend {
     server backend1:3000;  # 后端服务器1

@@ -31,7 +31,7 @@ volumes:
 
 > 找到定义的数据卷并复制到本地  备份 手动上传或者远程复制到迁移的B服务器
 
-```shell
+```bash
 # 查看数据券详情(可以用以下命令找到 jenkins_data 的实际路径（不是必须，只是想看一眼可以）：)
 docker volume inspect jenkins_data
 
@@ -75,7 +75,7 @@ docker-compose up -d
 >
 > 数据目录**/data/jenkins/jenkins_home**  直接启动就行了
 
-```shell
+```bash
 docker run -d \
   --name jenkins \
   -p 8080:8080 -p 50000:50000 \

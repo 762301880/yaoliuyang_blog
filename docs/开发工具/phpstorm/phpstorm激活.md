@@ -61,7 +61,7 @@
 
 > 注意:<font color="red">无限试用版本只有202003或者之前版本可以支持</font>
 
-```shell
+```bash
 yly@yly-PC:~/.config/JetBrains/GoLand2020.3/eval$ pwd   /home/yly/.config/JetBrains/GoLand2020.3/eval
 # 删除里面的key文件即可实现重置
 yly@yly-PC:~/.config/JetBrains/GoLand2020.3/eval$ ls GoLand203.evaluation.key
