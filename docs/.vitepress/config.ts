@@ -6,7 +6,6 @@ function groupSidebar(sidebar: any[]) {
     const result: any[] = []
 
     sidebar.forEach(item => {
-        // 1️⃣ 已经是分组（有 items）
         if (item.items && item.items.length) {
             result.push({
                 ...item,
@@ -15,7 +14,6 @@ function groupSidebar(sidebar: any[]) {
             return
         }
 
-        // 2️⃣ 普通页面（有 link）
         if (item.link) {
             const parts = item.link.split('/')
             const folder = parts[1] || 'root'
@@ -38,7 +36,6 @@ function groupSidebar(sidebar: any[]) {
     return result
 }
 
-// 原始 sidebar
 const rawSidebar = generateSidebar({
     documentRootPath: 'docs'
 })
@@ -46,56 +43,10 @@ const rawSidebar = generateSidebar({
 export default defineConfig({
     title: "姚留洋的技术博客",
 
+    // 👇 强制关闭 shiki 高亮，彻底解决所有语言注册报错
     markdown: {
         lineNumbers: true,
-        // 👇 👇 👇 【我帮你加的修复：shiki 支持所有语言】👇 👇 👇
-        shiki: {
-            langs: [
-                'php', 'html', 'javascript', 'css', 'json',
-                'sql', 'mysql', 'bash', 'yaml', 'markdown',
-                'nginx', 'dockerfile', 'python', 'java', 'go'
-            ],
-            fallbackLang: 'text'
-        },
-
-        config(md) {
-            const defaultFence = md.renderer.rules.fence
-
-            md.renderer.rules.fence = (tokens, idx, options, env, self) => {
-                const token = tokens[idx]
-                let lang = (token.info || '').trim().toLowerCase()
-
-                // ✅ 语言映射（关键：自动替换不支持的语言）
-                const langMap: Record<string, string> = {
-                    'mysql': 'sql',
-                    'postgres': 'sql',
-                    'shell': 'bash',
-                    'sh': 'bash',
-                    'zsh': 'bash',
-                    'env': 'bash',
-                    'ini': 'bash',
-                    'conf': 'bash',
-                    'nginx': 'bash',
-                    'docker': 'dockerfile',
-                    'yml': 'yaml',
-                    'php+html': 'php',
-                    'php-html': 'php',
-                    'sql:mysql': 'sql'
-                }
-
-                if (langMap[lang]) {
-                    token.info = langMap[lang]
-                }
-
-                try {
-                    return defaultFence(tokens, idx, options, env, self)
-                } catch (e) {
-                    // ✅ 兜底防构建失败
-                    token.info = 'text'
-                    return defaultFence(tokens, idx, options, env, self)
-                }
-            }
-        }
+        shiki: false, // 👈 关键：彻底禁用报错根源
     },
 
     themeConfig: {
