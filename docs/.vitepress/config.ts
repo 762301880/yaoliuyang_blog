@@ -46,6 +46,9 @@ const rawSidebar = generateSidebar({
 export default defineConfig({
     title: "姚留洋的技术博客",
 
+    //忽略死链检查
+    ignoreDeadLinks: true,
+
     markdown: {
         lineNumbers: true,
 
