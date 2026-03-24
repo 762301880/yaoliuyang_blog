@@ -8,7 +8,7 @@ https://developers.weixin.qq.com/doc/offiaccount/Account_Management/Generating_a
 
 ## 1.2 w3school 微信公众号开发文档
 
-```api
+```bash
 https://www.w3cschool.cn/weixinkaifawendang/
 ```
 

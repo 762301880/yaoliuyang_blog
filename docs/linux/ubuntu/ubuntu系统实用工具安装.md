@@ -29,7 +29,7 @@ sudo wget https://wdl1.cache.wps.cn/wps/download/ep/Linux2019/10161/wps-office_1
 
 > 使用`dpkg`命令安装下载的deb包即可
 
-```api
+```bash
 sudo dpkg -i  wps-office_11.1.0.10161_amd64.deb
 ```
 
